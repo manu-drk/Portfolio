@@ -1,0 +1,125 @@
+[
+	{
+		"id": "1",
+		"title": "Nina Carducci",
+		"cover": "./images/Capture d'écran 2024-07-01 111819.png",		
+		"Site": "https://manu-drk.github.io/Developpeur-Web-Projet-4-Nina-Carducci",
+        "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-4-Nina-Carducci",
+			"tags": [
+			"Javascript",
+			"HTML",
+            "CSS",
+            "SEO",
+			"Boostrap",
+            "Lighthouse",
+            "Wave",
+            "Rich Snippets",
+            "Figma"
+		],
+		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ],
+		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ]
+	},
+    {
+		"id": "2",
+		"title": "Kasa",
+		"cover": "./images/kasa.png",		
+		"Site": "",
+        "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-5-Kasa",
+			"tags": [
+			"Javascript",
+			"NodeJS",
+            "CSS",
+            "React",
+            "React Router",
+            "Figma",
+            "GitHub"            
+		],
+		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ],
+		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ]
+	},
+    {
+		"id": "3",
+		"title": "Sophie Bluel",
+		"cover": "./images/projet_ocr.jpg",		
+		"Site": "",
+        "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-3-Sophie-Bluel",
+			"tags": [
+			"Javascript",
+			"NodeJS",
+            "CSS",
+            "HTML",
+            "Swagger API",
+            "Figma",
+            "GitHub"          
+		],
+		"description": ["Vous travaillez comme développeur front-end pour l’agence ArchiWebos qui comprend 50 salariés.",
+        "Ayant terminé votre dernier projet avec un peu d'avance, vous êtes envoyé en renfort comme développeur front-end d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.",
+        "Après la réunion et le mail de Charlotte, vous listez vos 3 missions principales. Vous devez donc développer :",
+        "la page de présentation des travaux de l'architecte (à partir du HTML fourni).",
+        "la page de connexion de l'administrateur du site (le client) (code à créer de zéro).",
+        "a modale permettant d'uploader de nouveaux médias (code à créer from scratch)."
+        ],
+		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ]
+	},
+    {
+		"id": "4",
+		"title": "Booki",
+		"cover": "./images/Booki.png",		
+		"Site": "",
+        "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-2-Booki",
+			"tags": [
+			"CSS",
+            "HTML",            
+            "Figma",
+            "GitHub"           
+		],
+		"description": ["Vous débutez votre alternance en tant que développeur web au sein de la start-up Booki.",
+        "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+        "Vous êtes chargé d'intégrer l'interface du site avec du code HTML et CSS. Pour cela, vous travaillez en étroite collaboration avec Sarah, la CTO, et Loïc, l’UI designer. "
+        ],
+		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ]
+	},
+    {
+		"id": "5",
+		"title": "Mon vieux grimoire",
+		"cover": "./images/projet_ocr.jpg",		
+		"Site": "",
+        "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-6-Mon-Vieux-Grimoire",
+			"tags": [
+			"Javascript",
+			"NodeJS",
+            "Express",
+            "Postman",
+            "MongoDB",
+            "Figma",
+            "GitHub",
+            "API"          
+		],
+		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ],
+		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
+        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        ]
+	}
+]

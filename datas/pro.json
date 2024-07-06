@@ -1,0 +1,16 @@
+[
+	{
+		"id": "01",
+		"title": "Maison Vague",
+		"cover": "./images/Capture d'écran 2024-07-01 110057.png",		
+		"Site": "https://maisonvague.fr/",
+        "Github": "",
+			"tags": [
+			"Javascript",
+			"HTML",
+            "CSS",
+            "SEO",
+			"Boostrap"
+		]
+	}
+]

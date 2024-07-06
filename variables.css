@@ -1,0 +1,35 @@
+:root {
+    --background-color: #021514;
+    --text-color: #fff;
+    --nav-background-color: #333;
+    --nav-text-color: #fff;
+    --link-color: #11790d;
+    --link-hover-shadow: #4feb4a;
+    --carousel-border: #4feb4a;
+    --carousel-shadow: #11790d;
+    --carousel-animation: animate 2s infinite alternate;
+    --footer-background-color: #3333336b;
+    --footer-text-color: #fff;
+    --tag-background-color: #333;
+    --tag-text-color: #fff;
+    --tag-border-color: #11790d;
+}
+
+/* Light mode variables */
+.light-mode {
+    --background-color: #f5f5f5;
+    --text-color: #000;
+    --nav-background-color: #ddd;
+    --nav-text-color: #000;
+    --link-color: #007bff;
+    --link-hover-shadow: #0056b3;
+    --carousel-border: #007bff;
+    /* --carousel-shadow: none; */
+    --carousel-shadow: #0707072c;
+    --carousel-animation: none;   
+    --footer-background-color: #ddd;
+    --footer-text-color: #000;
+    --tag-background-color: #ddd;
+    --tag-text-color: #000;
+    --tag-border-color: #007bff;
+}
