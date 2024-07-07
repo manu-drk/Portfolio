@@ -2,7 +2,7 @@
 	{
 		"id": "1",
 		"title": "Nina Carducci",
-		"cover": "./images/Capture d'écran 2024-07-01 111819.png",		
+		"cover": "./images/ninatest.jpg",		
 		"Site": "https://manu-drk.github.io/Developpeur-Web-Projet-4-Nina-Carducci",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-4-Nina-Carducci",
 			"tags": [
@@ -79,7 +79,7 @@
     {
 		"id": "4",
 		"title": "Booki",
-		"cover": "./images/Booki.png",		
+		"cover": "./images/test2.jpg",		
 		"Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-2-Booki",
 			"tags": [
