@@ -52,7 +52,7 @@
     {
 		"id": "3",
 		"title": "Sophie Bluel",
-		"cover": "./images/projet_ocr.jpg",		
+		"cover": "./images/Sophie.jpg",		
 		"Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-3-Sophie-Bluel",
 			"tags": [
@@ -100,7 +100,7 @@
     {
 		"id": "5",
 		"title": "Mon vieux grimoire",
-		"cover": "./images/projet_ocr.jpg",		
+		"cover": "./images/Grimoire.jpg",		
 		"Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-6-Mon-Vieux-Grimoire",
 			"tags": [
