@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "page1_Curriculum": {
+        "image": "./images/cv.jpg"
+      }
+    },
+    {
+      "page2_Presentation": {
+        "image": "./images/cv.jpg"
+      }
+    },
+    {
+      "page3_OpenClassRoom": {
+        "image": "./images/cv.jpg"
+      }
+    }
+  ]
+}
