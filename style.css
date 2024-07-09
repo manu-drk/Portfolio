@@ -126,7 +126,7 @@ h1 {
 
 .carousel-ocr {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     justify-content: center;
     align-items: center;

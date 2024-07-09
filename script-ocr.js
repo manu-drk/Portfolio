@@ -1,275 +1,636 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const contentContainer = document.querySelector('.content');
-    
-    if (contentContainer) {
-        contentContainer.innerHTML = `
-            <h1>Projets OpenClassRoom</h1>
-            <div class="carousel-ocr">
-                <!-- Les éléments du carrousel OCR seront générés ici -->
-            </div>
-        `;
-        
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+
+    function loadOCRCarousel() {
         fetch('datas/ocr.json')
-            .then(response => response.json())
-            .then(data => {
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(carouselData => {
+                console.log('OCR data loaded:', carouselData);
+
                 const carouselContainer = document.querySelector('.carousel-ocr');
-                
-                if (carouselContainer) {
-                    data.forEach(item => {
-                        const carouselItem = document.createElement('div');
-                        carouselItem.className = 'carousel-item-ocr';
-        
-                        const img = document.createElement('img');
-                        img.src = item.cover;
-                        img.alt = item.title;
-        
-                        carouselItem.appendChild(img);
-                        carouselContainer.appendChild(carouselItem);
-        
-                        carouselItem.addEventListener('click', () => {
-                            showProjectDetails(item);
+                const titleContainer = document.createElement('div');
+                titleContainer.setAttribute('class', 'carousel-title');
+
+                const titleElement = document.createElement('h1');
+                titleContainer.appendChild(titleElement);
+                carouselContainer.before(titleContainer);
+
+                // Conteneur pour les détails des projets
+                const detailsContainer = document.createElement('div');
+                detailsContainer.setAttribute('class', 'details-container');
+                carouselContainer.after(detailsContainer);
+
+                // Variable pour suivre l'index actuel du carousel
+                let currentIndexOCR = 0;
+
+                // Fonction pour mettre à jour le titre et les détails en fonction de l'index
+                function updateDetails(index) {
+                    const project = carouselData[index];
+                    if (project) {
+                        // Mettre à jour le titre
+                        titleElement.innerText = project.title;
+
+                        // Mettre à jour les liens et les tags
+                        detailsContainer.innerHTML = '';
+                        const detailItem = document.createElement('div');
+                        detailItem.setAttribute('class', 'detail-item');
+
+                        const linksContainer = document.createElement('div');
+                        linksContainer.setAttribute('class', 'links-container');
+
+                        if (project.Site) {
+                            const siteLink = document.createElement('a');
+                            siteLink.setAttribute('href', project.Site);
+                            siteLink.setAttribute('target', '_blank');
+                            siteLink.innerText = 'Site';
+                            linksContainer.appendChild(siteLink);
+                        }
+
+                        if (project.Github) {
+                            const githubLink = document.createElement('a');
+                            githubLink.setAttribute('href', project.Github);
+                            githubLink.setAttribute('target', '_blank');
+                            githubLink.innerText = 'GitHub';
+                            linksContainer.appendChild(githubLink);
+                        }
+
+                        detailItem.appendChild(linksContainer);
+
+                        // Ajouter le bouton "Description"
+                        const descriptionButton = document.createElement('button');
+                        descriptionButton.innerText = 'Description';
+                        descriptionButton.onclick = () => showModal('descriptionModal', project.description || []);
+                        linksContainer.appendChild(descriptionButton);
+
+                        // Ajouter le bouton "Compétence"
+                        const competenceButton = document.createElement('button');
+                        competenceButton.innerText = 'Compétence';
+                        competenceButton.onclick = () => showModal('competenceModal', project.competences || []);
+                        linksContainer.appendChild(competenceButton);
+
+                        // Mettre à jour les tags
+                        const tagsContainer = document.createElement('div');
+                        tagsContainer.setAttribute('class', 'tags-container');
+                        project.tags.forEach(tag => {
+                            const tagElement = document.createElement('span');
+                            tagElement.setAttribute('class', 'tag');
+                            tagElement.innerText = tag;
+                            tagsContainer.appendChild(tagElement);
                         });
+
+                        detailItem.appendChild(tagsContainer);
+                        detailsContainer.appendChild(detailItem);
+                    }
+                }
+
+                carouselData.forEach((item, index) => {
+                    // Création de l'élément du carousel avec l'image
+                    const carouselItem = document.createElement('div');
+                    carouselItem.setAttribute('class', 'carousel-item-ocr');
+                    carouselItem.setAttribute('data-index', index); // Ajout de l'attribut data-index
+
+                    const image = document.createElement('img');
+                    image.setAttribute('src', item.cover); // Assurez-vous que item.cover pointe vers le bon chemin de l'image
+                    carouselItem.appendChild(image);
+                    carouselContainer.appendChild(carouselItem);
+                });
+
+                function showOCRCarouselItem(index) {
+                    const items = document.querySelectorAll('.carousel-item-ocr');
+                    const totalItems = items.length;
+
+                    items.forEach((item, i) => {
+                        const pos = (i - index + totalItems) % totalItems;
+                        switch (pos) {
+                            case 0:
+                                item.style.transform = 'translateX(-300px) scale(0.8)';
+                                item.style.opacity = '0.8';
+                                item.style.zIndex = 2;
+                                item.onclick = () => moveOCRCarousel(-1);
+                                break;
+                            case 1:
+                                item.style.transform = 'translateX(0px) scale(1)';
+                                item.style.opacity = '1';
+                                item.style.zIndex = 3;
+                                item.onclick = null;
+                                // Mettre à jour les détails lorsque l'élément central change
+                                updateDetails(i);
+                                break;
+                            case 2:
+                                item.style.transform = 'translateX(300px) scale(0.8)';
+                                item.style.opacity = '0.8';
+                                item.style.zIndex = 2;
+                                item.onclick = () => moveOCRCarousel(1);
+                                break;
+                            default:
+                                item.style.transform = 'translateX(0px) scale(0.4)';
+                                item.style.opacity = '0.4';
+                                item.style.zIndex = 0;
+                                item.onclick = null;
+                                break;
+                        }
                     });
-                } else {
-                    console.error('Carousel container not found');
+
+                    currentIndexOCR = index;
+                }
+
+                function moveOCRCarousel(direction) {
+                    const items = document.querySelectorAll('.carousel-item-ocr');
+                    currentIndexOCR = (currentIndexOCR + direction + items.length) % items.length;
+                    showOCRCarouselItem(currentIndexOCR);
+                }
+
+                showOCRCarouselItem(currentIndexOCR);
+
+                // Gestion des modales
+                function createModal(id, className) {
+                    const modal = document.createElement('div');
+                    modal.id = id;
+                    modal.classList.add(className);
+
+                    const modalContent = document.createElement('div');
+                    modalContent.classList.add('modal-content');
+
+                    const closeModal = document.createElement('span');
+                    closeModal.classList.add('close');
+                    closeModal.innerHTML = '&times;';
+                    closeModal.onclick = () => {
+                        modal.style.display = 'none';
+                    };
+
+                    modalContent.appendChild(closeModal);
+
+                    const modalDescription = document.createElement('div');
+                    modalDescription.classList.add('modal-description');
+                    modalContent.appendChild(modalDescription);
+
+                    modal.appendChild(modalContent);
+                    document.body.appendChild(modal);
+
+                    return modal;
+                }
+
+                const descriptionModal = createModal('descriptionModal', 'modal');
+                const competenceModal = createModal('competenceModal', 'modal');
+
+                function showModal(modalId, description) {
+                    const modal = document.getElementById(modalId);
+                    const modalDescription = modal.querySelector('.modal-description');
+                    modalDescription.innerHTML = ''; // Clear previous description
+                    description.forEach(paragraph => {
+                        const p = document.createElement('p');
+                        p.innerText = paragraph;
+                        modalDescription.appendChild(p);
+                    });
+                    modal.style.display = 'block';
+                }
+
+                // Close the modal when clicking outside of it
+                window.onclick = function(event) {
+                    const descriptionModal = document.getElementById('descriptionModal');
+                    const competenceModal = document.getElementById('competenceModal');
+                    if (event.target === descriptionModal) {
+                        descriptionModal.style.display = 'none';
+                    } else if (event.target === competenceModal) {
+                        competenceModal.style.display = 'none';
+                    }
                 }
             })
-            .catch(error => console.error('Error loading OCR data:', error));
-    } else {
-        console.error('Content container not found');
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
     }
 
-    function showProjectDetails(project) {
-        const detailsContainer = document.createElement('div');
-        detailsContainer.className = 'project-details';
-        detailsContainer.innerHTML = `
-            <h2>${project.title}</h2>
-            <p>${project.description.join('<br><br>')}</p>
-            <div>
-                <a href="${project.Github}" target="_blank">GitHub</a>
-                ${project.Site ? `<a href="${project.Site}" target="_blank">Site</a>` : ''}
-            </div>
-        `;
-        
-        if (contentContainer) {
-            contentContainer.innerHTML = '';
-            contentContainer.appendChild(detailsContainer);
-        } else {
-            console.error('Content container not found');
-        }
-    }
+    loadOCRCarousel();
 });
 
 
+// ****************************** old2 *******************
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('DOM fully loaded and parsed');
+// console.log('OCR script loaded and executed');
 
-//     function loadOCRCarousel() {
-//         fetch('datas/ocr.json')
-//             .then(response => {
-//                 if (!response.ok) {
-//                     throw new Error('Network response was not ok ' + response.statusText);
-//                 }
-//                 return response.json();
-//             })
-//             .then(carouselData => {
-//                 console.log('OCR data loaded:', carouselData);
+// function loadOCRCarousel() {
+//     fetch('datas/ocr.json')
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok ' + response.statusText);
+//             }
+//             return response.json();
+//         })
+//         .then(carouselData => {
+//             console.log('OCR data loaded:', carouselData);
 
-//                 const carouselContainer = document.querySelector('.carousel-ocr');
-//                 const titleContainer = document.createElement('div');
-//                 titleContainer.setAttribute('class', 'carousel-title');
+//             // Sélectionner ou créer le conteneur du carousel
+//             let carouselContainer = document.querySelector('.carousel-ocr');
+//             if (!carouselContainer) {
+//                 carouselContainer = document.createElement('div');
+//                 carouselContainer.classList.add('carousel-ocr');
+//                 document.querySelector('.content').appendChild(carouselContainer);
+//             }
 
-//                 const titleElement = document.createElement('h1');
-//                 titleContainer.appendChild(titleElement);
-//                 carouselContainer.before(titleContainer);
+//             // Masquer le carousel de base
+//             const baseCarousel = document.querySelector('.carousel');
+//             if (baseCarousel) {
+//                 baseCarousel.style.display = 'none';
+//             }
 
-//                 // Conteneur pour les détails des projets
-//                 const detailsContainer = document.createElement('div');
-//                 detailsContainer.setAttribute('class', 'details-container');
-//                 carouselContainer.after(detailsContainer);
+//             // Créer et insérer le conteneur du titre
+//             const titleContainer = document.createElement('div');
+//             titleContainer.setAttribute('class', 'carousel-title');
+//             carouselContainer.before(titleContainer);
 
-//                 // Variable pour suivre l'index actuel du carousel
-//                 let currentIndexOCR = 0;
+//             const titleElement = document.createElement('h1');
+//             titleContainer.appendChild(titleElement);
 
-//                 // Fonction pour mettre à jour le titre et les détails en fonction de l'index
-//                 function updateDetails(index) {
-//                     const project = carouselData[index];
-//                     if (project) {
-//                         // Mettre à jour le titre
-//                         titleElement.innerText = project.title;
+//             // Créer et insérer le conteneur des détails
+//             const detailsContainer = document.createElement('div');
+//             detailsContainer.setAttribute('class', 'details-container');
+//             carouselContainer.after(detailsContainer);
 
-//                         // Mettre à jour les liens et les tags
-//                         detailsContainer.innerHTML = '';
-//                         const detailItem = document.createElement('div');
-//                         detailItem.setAttribute('class', 'detail-item');
+//             let currentIndexOCR = 0;
 
-//                         const linksContainer = document.createElement('div');
-//                         linksContainer.setAttribute('class', 'links-container');
+//             function updateDetails(index) {
+//                 const project = carouselData[index];
+//                 if (project) {
+//                     titleElement.innerText = project.title;
+//                     detailsContainer.innerHTML = '';
 
-//                         if (project.Site) {
-//                             const siteLink = document.createElement('a');
-//                             siteLink.setAttribute('href', project.Site);
-//                             siteLink.setAttribute('target', '_blank');
-//                             siteLink.innerText = 'Site';
-//                             linksContainer.appendChild(siteLink);
-//                         }
+//                     const detailItem = document.createElement('div');
+//                     detailItem.setAttribute('class', 'detail-item');
 
-//                         if (project.Github) {
-//                             const githubLink = document.createElement('a');
-//                             githubLink.setAttribute('href', project.Github);
-//                             githubLink.setAttribute('target', '_blank');
-//                             githubLink.innerText = 'GitHub';
-//                             linksContainer.appendChild(githubLink);
-//                         }
+//                     const linksContainer = document.createElement('div');
+//                     linksContainer.setAttribute('class', 'links-container');
 
-//                         detailItem.appendChild(linksContainer);
-
-//                         // Ajouter le bouton "Description"
-//                         const descriptionButton = document.createElement('button');
-//                         descriptionButton.innerText = 'Description';
-//                         descriptionButton.onclick = () => showModal('descriptionModal', project.description || []);
-//                         linksContainer.appendChild(descriptionButton);
-
-//                         // Ajouter le bouton "Compétence"
-//                         const competenceButton = document.createElement('button');
-//                         competenceButton.innerText = 'Compétence';
-//                         competenceButton.onclick = () => showModal('competenceModal', project.competences || []);
-//                         linksContainer.appendChild(competenceButton);
-
-//                         // Mettre à jour les tags
-//                         const tagsContainer = document.createElement('div');
-//                         tagsContainer.setAttribute('class', 'tags-container');
-//                         project.tags.forEach(tag => {
-//                             const tagElement = document.createElement('span');
-//                             tagElement.setAttribute('class', 'tag');
-//                             tagElement.innerText = tag;
-//                             tagsContainer.appendChild(tagElement);
-//                         });
-
-//                         detailItem.appendChild(tagsContainer);
-//                         detailsContainer.appendChild(detailItem);
+//                     if (project.Site) {
+//                         const siteLink = document.createElement('a');
+//                         siteLink.setAttribute('href', project.Site);
+//                         siteLink.setAttribute('target', '_blank');
+//                         siteLink.innerText = 'Site';
+//                         linksContainer.appendChild(siteLink);
 //                     }
+
+//                     if (project.Github) {
+//                         const githubLink = document.createElement('a');
+//                         githubLink.setAttribute('href', project.Github);
+//                         githubLink.setAttribute('target', '_blank');
+//                         githubLink.innerText = 'GitHub';
+//                         linksContainer.appendChild(githubLink);
+//                     }
+
+//                     detailItem.appendChild(linksContainer);
+
+//                     const descriptionButton = document.createElement('button');
+//                     descriptionButton.innerText = 'Description';
+//                     descriptionButton.onclick = () => showModal('descriptionModal', project.description || []);
+//                     linksContainer.appendChild(descriptionButton);
+
+//                     const competenceButton = document.createElement('button');
+//                     competenceButton.innerText = 'Compétence';
+//                     competenceButton.onclick = () => showModal('competenceModal', project.competences || []);
+//                     linksContainer.appendChild(competenceButton);
+
+//                     const tagsContainer = document.createElement('div');
+//                     tagsContainer.setAttribute('class', 'tags-container');
+//                     project.tags.forEach(tag => {
+//                         const tagElement = document.createElement('span');
+//                         tagElement.setAttribute('class', 'tag');
+//                         tagElement.innerText = tag;
+//                         tagsContainer.appendChild(tagElement);
+//                     });
+
+//                     detailItem.appendChild(tagsContainer);
+//                     detailsContainer.appendChild(detailItem);
 //                 }
+//             }
 
-//                 carouselData.forEach((item, index) => {
-//                     // Création de l'élément du carousel avec l'image
-//                     const carouselItem = document.createElement('div');
-//                     carouselItem.setAttribute('class', 'carousel-item-ocr');
-//                     carouselItem.setAttribute('data-index', index); // Ajout de l'attribut data-index
+//             carouselData.forEach((item, index) => {
+//                 const carouselItem = document.createElement('div');
+//                 carouselItem.setAttribute('class', 'carousel-item-ocr');
+//                 carouselItem.setAttribute('data-index', index);
 
-//                     const image = document.createElement('img');
-//                     image.setAttribute('src', item.cover);
-//                     carouselItem.appendChild(image);
-//                     carouselContainer.appendChild(carouselItem);
+//                 const image = document.createElement('img');
+//                 image.setAttribute('src', item.cover);
+//                 carouselItem.appendChild(image);
+//                 carouselContainer.appendChild(carouselItem);
+//             });
+
+//             function showOCRCarouselItem(index) {
+//                 const items = document.querySelectorAll('.carousel-item-ocr');
+//                 const totalItems = items.length;
+
+//                 items.forEach((item, i) => {
+//                     const pos = (i - index + totalItems) % totalItems;
+//                     switch (pos) {
+//                         case 0:
+//                             item.style.transform = 'translateX(-300px) scale(0.8)';
+//                             item.style.opacity = '0.8';
+//                             item.style.zIndex = 2;
+//                             item.onclick = () => moveOCRCarousel(-1);
+//                             break;
+//                         case 1:
+//                             item.style.transform = 'translateX(0px) scale(1)';
+//                             item.style.opacity = '1';
+//                             item.style.zIndex = 3;
+//                             item.onclick = null;
+//                             updateDetails(i);
+//                             break;
+//                         case 2:
+//                             item.style.transform = 'translateX(300px) scale(0.8)';
+//                             item.style.opacity = '0.8';
+//                             item.style.zIndex = 2;
+//                             item.onclick = () => moveOCRCarousel(1);
+//                             break;
+//                         default:
+//                             item.style.transform = 'translateX(0px) scale(0.4)';
+//                             item.style.opacity = '0.4';
+//                             item.style.zIndex = 0;
+//                             item.onclick = null;
+//                             break;
+//                     }
 //                 });
 
-//                 function showOCRCarouselItem(index) {
-//                     const items = document.querySelectorAll('.carousel-item-ocr');
-//                     const totalItems = items.length;
+//                 currentIndexOCR = index;
+//             }
 
-//                     items.forEach((item, i) => {
-//                         const pos = (i - index + totalItems) % totalItems;
-//                         switch (pos) {
-//                             case 0:
-//                                 item.style.transform = 'translateX(-300px) scale(0.8)';
-//                                 item.style.opacity = '0.8';
-//                                 item.style.zIndex = 2;
-//                                 item.onclick = () => moveOCRCarousel(-1);
-//                                 break;
-//                             case 1:
-//                                 item.style.transform = 'translateX(0px) scale(1)';
-//                                 item.style.opacity = '1';
-//                                 item.style.zIndex = 3;
-//                                 item.onclick = null;
-//                                 // Mettre à jour les détails lorsque l'élément central change
-//                                 updateDetails(i);
-//                                 break;
-//                             case 2:
-//                                 item.style.transform = 'translateX(300px) scale(0.8)';
-//                                 item.style.opacity = '0.8';
-//                                 item.style.zIndex = 2;
-//                                 item.onclick = () => moveOCRCarousel(1);
-//                                 break;
-//                             default:
-//                                 item.style.transform = 'translateX(0px) scale(0.4)';
-//                                 item.style.opacity = '0.4';
-//                                 item.style.zIndex = 0;
-//                                 item.onclick = null;
-//                                 break;
-//                         }
-//                     });
-
-//                     currentIndexOCR = index;
-//                 }
-
-//                 function moveOCRCarousel(direction) {
-//                     const items = document.querySelectorAll('.carousel-item-ocr');
-//                     currentIndexOCR = (currentIndexOCR + direction + items.length) % items.length;
-//                     showOCRCarouselItem(currentIndexOCR);
-//                 }
-
+//             function moveOCRCarousel(direction) {
+//                 const items = document.querySelectorAll('.carousel-item-ocr');
+//                 currentIndexOCR = (currentIndexOCR + direction + items.length) % items.length;
 //                 showOCRCarouselItem(currentIndexOCR);
+//             }
 
-//                 // Gestion des modales
-//                 function createModal(id, className) {
-//                     const modal = document.createElement('div');
-//                     modal.id = id;
-//                     modal.classList.add(className);
+//             showOCRCarouselItem(currentIndexOCR);
 
-//                     const modalContent = document.createElement('div');
-//                     modalContent.classList.add('modal-content');
+//             function createModal(id, className) {
+//                 const modal = document.createElement('div');
+//                 modal.id = id;
+//                 modal.classList.add(className);
 
-//                     const closeModal = document.createElement('span');
-//                     closeModal.classList.add('close');
-//                     closeModal.innerHTML = '&times;';
-//                     closeModal.onclick = () => {
-//                         modal.style.display = 'none';
-//                     };
+//                 const modalContent = document.createElement('div');
+//                 modalContent.classList.add('modal-content');
 
-//                     modalContent.appendChild(closeModal);
+//                 const closeModal = document.createElement('span');
+//                 closeModal.classList.add('close');
+//                 closeModal.innerHTML = '&times;';
+//                 closeModal.onclick = () => {
+//                     modal.style.display = 'none';
+//                 };
 
-//                     const modalDescription = document.createElement('div');
-//                     modalDescription.classList.add('modal-description');
-//                     modalContent.appendChild(modalDescription);
+//                 modalContent.appendChild(closeModal);
 
-//                     modal.appendChild(modalContent);
-//                     document.body.appendChild(modal);
+//                 const modalDescription = document.createElement('div');
+//                 modalDescription.classList.add('modal-description');
+//                 modalContent.appendChild(modalDescription);
 
-//                     return modal;
+//                 modal.appendChild(modalContent);
+//                 document.body.appendChild(modal);
+
+//                 return modal;
+//             }
+
+//             const descriptionModal = createModal('descriptionModal', 'modal');
+//             const competenceModal = createModal('competenceModal', 'modal');
+
+//             function showModal(modalId, description) {
+//                 const modal = document.getElementById(modalId);
+//                 const modalDescription = modal.querySelector('.modal-description');
+//                 modalDescription.innerHTML = '';
+//                 description.forEach(paragraph => {
+//                     const p = document.createElement('p');
+//                     p.innerText = paragraph;
+//                     modalDescription.appendChild(p);
+//                 });
+//                 modal.style.display = 'block';
+//             }
+
+//             window.onclick = function(event) {
+//                 const descriptionModal = document.getElementById('descriptionModal');
+//                 const competenceModal = document.getElementById('competenceModal');
+//                 if (event.target === descriptionModal) {
+//                     descriptionModal.style.display = 'none';
+//                 } else if (event.target === competenceModal) {
+//                     competenceModal.style.display = 'none';
 //                 }
+//             }
+//         })
+//         .catch(error => {
+//             console.error('There has been a problem with your fetch operation:', error);
+//         });
+// }
 
-//                 const descriptionModal = createModal('descriptionModal', 'modal');
-//                 const competenceModal = createModal('competenceModal', 'modal');
 
-//                 function showModal(modalId, description) {
-//                     const modal = document.getElementById(modalId);
-//                     const modalDescription = modal.querySelector('.modal-description');
-//                     modalDescription.innerHTML = ''; // Clear previous description
-//                     description.forEach(paragraph => {
-//                         const p = document.createElement('p');
-//                         p.innerText = paragraph;
-//                         modalDescription.appendChild(p);
-//                     });
-//                     modal.style.display = 'block';
-//                 }
 
-//                 // Close the modal when clicking outside of it
-//                 window.onclick = function(event) {
-//                     const descriptionModal = document.getElementById('descriptionModal');
-//                     const competenceModal = document.getElementById('competenceModal');
-//                     if (event.target === descriptionModal) {
-//                         descriptionModal.style.display = 'none';
-//                     } else if (event.target === competenceModal) {
-//                         competenceModal.style.display = 'none';
+
+
+
+// **************** Av *********************
+
+// console.log('OCR script loaded and executed');
+
+// function loadOCRCarousel() {
+//     fetch('datas/ocr.json')
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok ' + response.statusText);
+//             }
+//             return response.json();
+//         })
+//         .then(carouselData => {
+//             console.log('OCR data loaded:', carouselData);
+
+//             // Sélectionner ou créer le conteneur du carousel
+//             let carouselContainer = document.querySelector('.carousel-ocr');
+//             if (!carouselContainer) {
+//                 carouselContainer = document.createElement('div');
+//                 carouselContainer.classList.add('carousel-ocr');
+//                 document.querySelector('.content').appendChild(carouselContainer);
+//             }
+
+//             // Créer et insérer le conteneur du titre
+//             const titleContainer = document.createElement('div');
+//             titleContainer.setAttribute('class', 'carousel-title');
+//             carouselContainer.before(titleContainer);
+
+//             const titleElement = document.createElement('h1');
+//             titleContainer.appendChild(titleElement);
+
+//             // Créer et insérer le conteneur des détails
+//             const detailsContainer = document.createElement('div');
+//             detailsContainer.setAttribute('class', 'details-container');
+//             carouselContainer.after(detailsContainer);
+
+//             let currentIndexOCR = 0;
+
+//             function updateDetails(index) {
+//                 const project = carouselData[index];
+//                 if (project) {
+//                     titleElement.innerText = project.title;
+//                     detailsContainer.innerHTML = '';
+
+//                     const detailItem = document.createElement('div');
+//                     detailItem.setAttribute('class', 'detail-item');
+
+//                     const linksContainer = document.createElement('div');
+//                     linksContainer.setAttribute('class', 'links-container');
+
+//                     if (project.Site) {
+//                         const siteLink = document.createElement('a');
+//                         siteLink.setAttribute('href', project.Site);
+//                         siteLink.setAttribute('target', '_blank');
+//                         siteLink.innerText = 'Site';
+//                         linksContainer.appendChild(siteLink);
 //                     }
+
+//                     if (project.Github) {
+//                         const githubLink = document.createElement('a');
+//                         githubLink.setAttribute('href', project.Github);
+//                         githubLink.setAttribute('target', '_blank');
+//                         githubLink.innerText = 'GitHub';
+//                         linksContainer.appendChild(githubLink);
+//                     }
+
+//                     detailItem.appendChild(linksContainer);
+
+//                     const descriptionButton = document.createElement('button');
+//                     descriptionButton.innerText = 'Description';
+//                     descriptionButton.onclick = () => showModal('descriptionModal', project.description || []);
+//                     linksContainer.appendChild(descriptionButton);
+
+//                     const competenceButton = document.createElement('button');
+//                     competenceButton.innerText = 'Compétence';
+//                     competenceButton.onclick = () => showModal('competenceModal', project.competences || []);
+//                     linksContainer.appendChild(competenceButton);
+
+//                     const tagsContainer = document.createElement('div');
+//                     tagsContainer.setAttribute('class', 'tags-container');
+//                     project.tags.forEach(tag => {
+//                         const tagElement = document.createElement('span');
+//                         tagElement.setAttribute('class', 'tag');
+//                         tagElement.innerText = tag;
+//                         tagsContainer.appendChild(tagElement);
+//                     });
+
+//                     detailItem.appendChild(tagsContainer);
+//                     detailsContainer.appendChild(detailItem);
 //                 }
-//             })
-//             .catch(error => {
-//                 console.error('There has been a problem with your fetch operation:', error);
+//             }
+
+//             carouselData.forEach((item, index) => {
+//                 const carouselItem = document.createElement('div');
+//                 carouselItem.setAttribute('class', 'carousel-item-ocr');
+//                 carouselItem.setAttribute('data-index', index);
+
+//                 const image = document.createElement('img');
+//                 image.setAttribute('src', item.cover);
+//                 carouselItem.appendChild(image);
+//                 carouselContainer.appendChild(carouselItem);
 //             });
-//     }
 
-//     loadOCRCarousel();
-// });
+//             function showOCRCarouselItem(index) {
+//                 const items = document.querySelectorAll('.carousel-item-ocr');
+//                 const totalItems = items.length;
 
+//                 items.forEach((item, i) => {
+//                     const pos = (i - index + totalItems) % totalItems;
+//                     switch (pos) {
+//                         case 0:
+//                             item.style.transform = 'translateX(-300px) scale(0.8)';
+//                             item.style.opacity = '0.8';
+//                             item.style.zIndex = 2;
+//                             item.onclick = () => moveOCRCarousel(-1);
+//                             break;
+//                         case 1:
+//                             item.style.transform = 'translateX(0px) scale(1)';
+//                             item.style.opacity = '1';
+//                             item.style.zIndex = 3;
+//                             item.onclick = null;
+//                             updateDetails(i);
+//                             break;
+//                         case 2:
+//                             item.style.transform = 'translateX(300px) scale(0.8)';
+//                             item.style.opacity = '0.8';
+//                             item.style.zIndex = 2;
+//                             item.onclick = () => moveOCRCarousel(1);
+//                             break;
+//                         default:
+//                             item.style.transform = 'translateX(0px) scale(0.4)';
+//                             item.style.opacity = '0.4';
+//                             item.style.zIndex = 0;
+//                             item.onclick = null;
+//                             break;
+//                     }
+//                 });
+
+//                 currentIndexOCR = index;
+//             }
+
+//             function moveOCRCarousel(direction) {
+//                 const items = document.querySelectorAll('.carousel-item-ocr');
+//                 currentIndexOCR = (currentIndexOCR + direction + items.length) % items.length;
+//                 showOCRCarouselItem(currentIndexOCR);
+//             }
+
+//             showOCRCarouselItem(currentIndexOCR);
+
+//             function createModal(id, className) {
+//                 const modal = document.createElement('div');
+//                 modal.id = id;
+//                 modal.classList.add(className);
+
+//                 const modalContent = document.createElement('div');
+//                 modalContent.classList.add('modal-content');
+
+//                 const closeModal = document.createElement('span');
+//                 closeModal.classList.add('close');
+//                 closeModal.innerHTML = '&times;';
+//                 closeModal.onclick = () => {
+//                     modal.style.display = 'none';
+//                 };
+
+//                 modalContent.appendChild(closeModal);
+
+//                 const modalDescription = document.createElement('div');
+//                 modalDescription.classList.add('modal-description');
+//                 modalContent.appendChild(modalDescription);
+
+//                 modal.appendChild(modalContent);
+//                 document.body.appendChild(modal);
+
+//                 return modal;
+//             }
+
+//             const descriptionModal = createModal('descriptionModal', 'modal');
+//             const competenceModal = createModal('competenceModal', 'modal');
+
+//             function showModal(modalId, description) {
+//                 const modal = document.getElementById(modalId);
+//                 const modalDescription = modal.querySelector('.modal-description');
+//                 modalDescription.innerHTML = '';
+//                 description.forEach(paragraph => {
+//                     const p = document.createElement('p');
+//                     p.innerText = paragraph;
+//                     modalDescription.appendChild(p);
+//                 });
+//                 modal.style.display = 'block';
+//             }
+
+//             window.onclick = function(event) {
+//                 const descriptionModal = document.getElementById('descriptionModal');
+//                 const competenceModal = document.getElementById('competenceModal');
+//                 if (event.target === descriptionModal) {
+//                     descriptionModal.style.display = 'none';
+//                 } else if (event.target === competenceModal) {
+//                     competenceModal.style.display = 'none';
+//                 }
+//             }
+//         })
+//         .catch(error => {
+//             console.error('There has been a problem with your fetch operation:', error);
+//         });
+// }
+
+// loadOCRCarousel();

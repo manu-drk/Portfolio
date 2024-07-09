@@ -7,7 +7,11 @@ function goBack() {
     history.back();
 }
 
+
+
+
 let currentIndex = 0;
+// let currentIndex = 1;
 
 function showCarouselItem(index) {
     const items = document.querySelectorAll('.carousel-item');
@@ -25,7 +29,7 @@ function showCarouselItem(index) {
                 item.style.transform = 'translateX(0px) scale(1)';
                 item.style.opacity = '1';
                 item.style.zIndex = 3;
-                item.onclick = () => loadContent(item.getAttribute('data-script'));
+                item.onclick = () => goTo(item.getAttribute('data-link'));
                 break;
             case 2:
                 item.style.transform = 'translateX(300px) scale(0.8)';
@@ -49,6 +53,21 @@ function moveCarousel(direction) {
     showCarouselItem(currentIndex);
 }
 
+
+function goTo(url, target) {
+    if (target === '_blank') {
+        window.open(url, '_blank'); // Ouvre le lien dans une nouvelle fenêtre
+    } else {
+        window.location.href = url; // Ouvre le lien dans la même fenêtre
+    }
+}
+
+// function goTo(url) {
+//     window.location.href = url; // Ouvre le lien dans la même fenêtre
+// }
+
 document.addEventListener('DOMContentLoaded', () => {
     showCarouselItem(currentIndex);
 });
+
+
