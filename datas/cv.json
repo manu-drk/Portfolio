@@ -9,30 +9,45 @@
 	},
     {
 		"id": "71",
-		"title": "Expériences professionnelles",        
-        "description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"title": "Expériences professionnelles partie 1",        
+        "description": [
+            "SIFAM 2021 – Actuel\n\nResponsable pôle transports & Commercial sédentaire\n\nNégociation des contrats\nMise en place des conditions de transport\nAnticipation des risques\nVente et conseils techniques\nTraitement et suivi des commandes",
+            "ALCHIM’ INK TATTOO 2016 - 2020\n\nGérant et tatoueur\n\nTatouage, design et création\nRecrutement et management\nProspection, réseaux sociaux\nMarketing, communication, référencement sur Google Ads\nApprovisionnement et gestion des stocks"
         ]
+            
+        
 	},
     {
 		"id": "72",
-		"title": "Diplômes obtenus",        
-        "description": ["Ulla integre ex sse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum  actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre  novimus Romano cum ex inopia actitatum indolis"
+		"title": "Expériences professionnelles partie 2",        
+        "description": ["LEROY MERLIN 2007 - 2015\n\nConseiller de vente\n\nConseils et vente de projets sur mesure (pose, livraison et financement)\nAnimations commerciales\nGestion de stock\nFormations des nouveaux collaborateurs et collaboratrices",
+		"COSTAMAGNA 2005 - 2007\n\nMagasinier (BTS en alternance)\n\nVente / Conseils techniques\nAnimations commerciales\nGestion de stock",
+		"RECTO VERSO 2003 - 2005\n\nTechnicien en matériel bureautique (Bac pro en alternance)\n\nConseils techniques\nInstallation en réseau\nMise en service et dépannage"
         ]
 	},
     {
 		"id": "73",
+		"title": "Diplômes obtenus",        
+        "description": [
+            "2023 - BTS MCO\nManagement commercial opérationnel\n(obtenu)",
+            "2021 - Titre Professionnel\nConducteur du transport routier de marchandises\n(obtenu)",
+            "2007 - BTS MUC\nManagement des Unités Commerciales\n(niveau)",
+            "2005 - BAC PRO MRIM\nMicro-informatique Réseau Installation Maintenance\n(obtenu)",
+            "2003 - CAP AMMB\nAgent de Maintenance de Matériel Bureautique\n(obtenu)"
+        ]
+	},
+    {
+		"id": "74",
 		"title": "Centres d'interêts",        
-        "description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        "description": [
+            "Nouvelles technologies",
+            "Voyages et roadtrip",
+            "Sport et randonnée",
+            "Concert et cinéma"
         ]
     },
     {
-		"id": "74",
+		"id": "75",
 		"title": "Compétences",        
         "description": ["Bash",
         "Bcrypt",        

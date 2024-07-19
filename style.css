@@ -117,12 +117,59 @@ h1 {
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
     transition: transform 0.5s, opacity 0.5s;
+    /* overflow: scroll;     */
+    overflow-y: scroll;
+    overflow-x: hidden;
     /* cursor: pointer; */
     position: absolute;
     transform: scale(0.6);
     opacity: 0.6;
     background-color: white;
 }
+
+
+/* ******** scroll ********* */
+
+/* La scrollbar */
+.carousel-ocr::-webkit-scrollbar,
+.carousel-pro::-webkit-scrollbar,
+.carousel-cv::-webkit-scrollbar,
+.carousel-presentation::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+    height: 12px; /* Hauteur de la scrollbar horizontale (si vous en avez une) */
+}
+
+/* La partie déplaçable de la scrollbar (le "thumb") */
+.carousel-ocr::-webkit-scrollbar-thumb,
+.carousel-pro::-webkit-scrollbar-thumb,
+.carousel-cv::-webkit-scrollbar-thumb,
+.carousel-presentation::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Coins arrondis */
+    border: 3px solid #f0f0f0; /* Bordure autour de la barre de défilement */
+}
+
+/* La partie arrière de la scrollbar (le "track") */
+.carousel-ocr::-webkit-scrollbar-track,
+.carousel-pro::-webkit-scrollbar-track,
+.carousel-cv::-webkit-scrollbar-track,
+.carousel-presentation::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Couleur de la piste de défilement */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* La partie au survol de la scrollbar */
+.carousel-ocr::-webkit-scrollbar-thumb:hover,
+.carousel-pro::-webkit-scrollbar-thumb:hover,
+.carousel-cv::-webkit-scrollbar-thumb:hover,
+.carousel-presentation::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la barre de défilement au survol */
+}
+
+
+
+
+/* ******** scroll ********* */
 
 .carousel-ocr {
     display: flex;
@@ -198,7 +245,7 @@ h1 {
 .carousel-cv li ,
 .carousel-presentation li {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     color: black;
     margin: 10px auto;
 }

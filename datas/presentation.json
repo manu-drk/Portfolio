@@ -2,10 +2,10 @@
 	{
 		"id": "50",
 		"title": "Présentation",        
-        "description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule etiam destinatis segetum pauloque esse etiam ulla x integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
-        ]
+        "description": ["Je suis actuellement en formation Développeur Web de niveau Bac +2 via l’école en ligne OpenClassrooms.",
+        "Ma formation a débuté le 22 février et se terminera le 21 août.",
+        "Durant cette formation, je me forme aux technologies et aux langages suivants :",
+        "HTML, CSS, JavaScript, React, Git/GitHub, NodeJS, LightHouse, Express, MongoDB, les API REST"]
 	},
     {
 		"id": "51",
