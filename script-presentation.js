@@ -54,18 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.style.transform = 'translateX(-300px) scale(0.8)';
                     item.style.opacity = '0.8';
                     item.style.zIndex = 2;
+                    item.classList.add('carousel-item-pointer');
                     item.onclick = () => movePresentationCarousel(-1);
                     break;
                 case 1:
                     item.style.transform = 'translateX(0px) scale(1)';
                     item.style.opacity = '1';
                     item.style.zIndex = 3;
-                    item.onclick = () => goTo(item.getAttribute('data-link'));
+                    item.classList.remove('carousel-item-pointer');
+                    item.onclick = null;;
                     break;
                 case 2:
                     item.style.transform = 'translateX(300px) scale(0.8)';
                     item.style.opacity = '0.8';
                     item.style.zIndex = 2;
+                    item.classList.add('carousel-item-pointer');
                     item.onclick = () => movePresentationCarousel(1);
                     break;
                 default:

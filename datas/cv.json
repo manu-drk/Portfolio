@@ -11,8 +11,8 @@
 		"id": "71",
 		"title": "Expériences professionnelles partie 1",        
         "description": [
-            "SIFAM 2021 – Actuel\n\nResponsable pôle transports & Commercial sédentaire\n\nNégociation des contrats\nMise en place des conditions de transport\nAnticipation des risques\nVente et conseils techniques\nTraitement et suivi des commandes",
-            "ALCHIM’ INK TATTOO 2016 - 2020\n\nGérant et tatoueur\n\nTatouage, design et création\nRecrutement et management\nProspection, réseaux sociaux\nMarketing, communication, référencement sur Google Ads\nApprovisionnement et gestion des stocks"
+            "SIFAM 2021 – Actuel\n\nResponsable pôle transports & Commercial sédentaire\n\nNégociation des contrats\nMise en place des conditions de transport\nAnticipation des risques\nVente et conseils techniques\nTraitement et suivi des commandes\n\n\n",
+            "ALCHIM’ INK TATTOO 2016 - 2020\n\nGérant et tatoueur\n\nTatouage, design et création\nRecrutement et management\nProspection, réseaux sociaux\nMarketing, communication, référencement sur Google Ads\nApprovisionnement et gestion des stocks\n\n\n"
         ]
             
         
@@ -20,49 +20,52 @@
     {
 		"id": "72",
 		"title": "Expériences professionnelles partie 2",        
-        "description": ["LEROY MERLIN 2007 - 2015\n\nConseiller de vente\n\nConseils et vente de projets sur mesure (pose, livraison et financement)\nAnimations commerciales\nGestion de stock\nFormations des nouveaux collaborateurs et collaboratrices",
-		"COSTAMAGNA 2005 - 2007\n\nMagasinier (BTS en alternance)\n\nVente / Conseils techniques\nAnimations commerciales\nGestion de stock",
-		"RECTO VERSO 2003 - 2005\n\nTechnicien en matériel bureautique (Bac pro en alternance)\n\nConseils techniques\nInstallation en réseau\nMise en service et dépannage"
+        "description": [
+            "LEROY MERLIN 2007 - 2015\n\nConseiller de vente\n\nConseils et vente de projets sur mesure (pose, livraison et financement)\nAnimations commerciales\nGestion de stock\nFormations des nouveaux collaborateurs et collaboratrices\n\n\n",
+            "COSTAMAGNA 2005 - 2007\n\nMagasinier (BTS en alternance)\n\nVente / Conseils techniques\nAnimations commerciales\nGestion de stock\n\n\n",
+            "RECTO VERSO 2003 - 2005\n\nTechnicien en matériel bureautique (Bac pro en alternance)\n\nConseils techniques\nInstallation en réseau\nMise en service et dépannage\n\n\n"
         ]
 	},
     {
 		"id": "73",
+        "cover": "./images/light_mode_fond.jpg",
 		"title": "Diplômes obtenus",        
         "description": [
-            "2023 - BTS MCO\nManagement commercial opérationnel\n(obtenu)",
-            "2021 - Titre Professionnel\nConducteur du transport routier de marchandises\n(obtenu)",
-            "2007 - BTS MUC\nManagement des Unités Commerciales\n(niveau)",
-            "2005 - BAC PRO MRIM\nMicro-informatique Réseau Installation Maintenance\n(obtenu)",
-            "2003 - CAP AMMB\nAgent de Maintenance de Matériel Bureautique\n(obtenu)"
+            "2023 - BTS MCO\nManagement commercial opérationnel\n(obtenu)\n\n",
+            "2021 - Titre Professionnel\nConducteur du transport routier de marchandises\n(obtenu)\n\n",
+            "2007 - BTS MUC\nManagement des Unités Commerciales\n(niveau)\n\n",
+            "2005 - BAC PRO MRIM\nMicro-informatique Réseau Installation Maintenance\n(obtenu)\n\n",
+            "2003 - CAP AMMB\nAgent de Maintenance de Matériel Bureautique\n(obtenu)\n\n"
         ]
 	},
     {
 		"id": "74",
 		"title": "Centres d'interêts",        
         "description": [
-            "Nouvelles technologies",
-            "Voyages et roadtrip",
-            "Sport et randonnée",
-            "Concert et cinéma"
+            "Nouvelles technologies\n",
+            "Programmation et jeux video",
+            "Voyages et roadtrip\n",
+            "Sport et randonnée\n",
+            "Concert et cinéma\n"
         ]
     },
     {
 		"id": "75",
 		"title": "Compétences",        
-        "description": ["Bash",
-        "Bcrypt",        
-        "CSS",
-        "Express",
-        "Express Mongo",
-        "Helmet",
-        "HTML",
-        "JavaScript",
-        "MongoDB",
-        "NodeJS",
-        "React Routeur",
-        "ReactJS",
-        "Sass",
-        "SEO"
+        "description": ["Bash\n",
+        "Bcrypt\n",        
+        "CSS\n",
+        "Express\n",
+        "Express Mongo\n",
+        "Helmet\n",
+        "HTML\n",
+        "JavaScript\n",
+        "MongoDB\n",
+        "NodeJS\n",
+        "React Routeur\n",
+        "ReactJS\n",
+        "Sass\n",
+        "SEO\n"
         ]
     }
 ]

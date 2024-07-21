@@ -1,0 +1,47 @@
+@import url('variables.css');
+
+/* body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+} */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#mode-toggle-container {
+    position: fixed;
+    top: 12px;
+    right: 85px;
+    width: 40px;
+    height: 15px;
+    background-color: var(--toggle-background); 
+    /* background-color: #ccc; */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#mode-toggle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+body.light-mode #mode-toggle {
+    transform: translateX(0);
+}
+
+body.dark-mode #mode-toggle {
+    transform: translateX(20px);
+}

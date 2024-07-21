@@ -13,6 +13,7 @@
     --tag-background-color: #333;
     --tag-text-color: #fff;
     --tag-border-color: #11790d;
+    --toggle-background: #28a745;
 }
 
 /* Light mode variables */
@@ -32,4 +33,5 @@
     --tag-background-color: #ddd;
     --tag-text-color: #000;
     --tag-border-color: #007bff;
+    --toggle-background: #007bff;;
 }

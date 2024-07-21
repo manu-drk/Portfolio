@@ -131,6 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     const title = document.createElement('h2');
                     title.innerText = item.title;
                     carouselItem.appendChild(title);
+
+                    const image = document.createElement('img');
+                    image.setAttribute('src', item.cover);
+                    carouselItem.appendChild(image);
                     
                     const descriptionList = document.createElement('ul');
                     item.description.forEach(desc => {
@@ -149,6 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching CV carousel data:', error));
     }
 
+    // *************************
+
+
+  
+
+
     function showCvCarouselItem(index) {
         const items = document.querySelectorAll('.carousel-item-cv');
         const totalItems = items.length;
@@ -160,18 +170,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.style.transform = 'translateX(-300px) scale(0.8)';
                     item.style.opacity = '0.8';
                     item.style.zIndex = 2;
+                    item.classList.add('carousel-item-pointer');
                     item.onclick = () => moveCvCarousel(-1);
                     break;
                 case 1:
                     item.style.transform = 'translateX(0px) scale(1)';
                     item.style.opacity = '1';
                     item.style.zIndex = 3;
-                    item.onclick = () => goTo(item.getAttribute('data-link'));
+                    item.classList.remove('carousel-item-pointer');
+                    item.onclick = null;
                     break;
                 case 2:
                     item.style.transform = 'translateX(300px) scale(0.8)';
                     item.style.opacity = '0.8';
                     item.style.zIndex = 2;
+                    item.classList.add('carousel-item-pointer');
                     item.onclick = () => moveCvCarousel(1);
                     break;
                 default:

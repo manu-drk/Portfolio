@@ -118,58 +118,26 @@ h1 {
     animation: var(--carousel-animation);
     transition: transform 0.5s, opacity 0.5s;
     /* overflow: scroll;     */
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
     /* cursor: pointer; */
     position: absolute;
     transform: scale(0.6);
     opacity: 0.6;
     background-color: white;
 }
-
-
-/* ******** scroll ********* */
-
-/* La scrollbar */
-.carousel-ocr::-webkit-scrollbar,
-.carousel-pro::-webkit-scrollbar,
-.carousel-cv::-webkit-scrollbar,
-.carousel-presentation::-webkit-scrollbar {
-    width: 12px; /* Largeur de la scrollbar */
-    height: 12px; /* Hauteur de la scrollbar horizontale (si vous en avez une) */
+.carousel-item-pointer {
+    cursor: pointer;
+}
+.carousel-ocr .carousel-item-ocr,
+.carousel-pro .carousel-item-pro {
+    overflow: hidden;
+}
+.carousel-cv .carousel-item-cv,
+.carousel-presentation .carousel-item-presentation {
+    overflow: scroll;    
 }
 
-/* La partie déplaçable de la scrollbar (le "thumb") */
-.carousel-ocr::-webkit-scrollbar-thumb,
-.carousel-pro::-webkit-scrollbar-thumb,
-.carousel-cv::-webkit-scrollbar-thumb,
-.carousel-presentation::-webkit-scrollbar-thumb {
-    background: #888; /* Couleur de la barre de défilement */
-    border-radius: 10px; /* Coins arrondis */
-    border: 3px solid #f0f0f0; /* Bordure autour de la barre de défilement */
-}
-
-/* La partie arrière de la scrollbar (le "track") */
-.carousel-ocr::-webkit-scrollbar-track,
-.carousel-pro::-webkit-scrollbar-track,
-.carousel-cv::-webkit-scrollbar-track,
-.carousel-presentation::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Couleur de la piste de défilement */
-    border-radius: 10px; /* Coins arrondis */
-}
-
-/* La partie au survol de la scrollbar */
-.carousel-ocr::-webkit-scrollbar-thumb:hover,
-.carousel-pro::-webkit-scrollbar-thumb:hover,
-.carousel-cv::-webkit-scrollbar-thumb:hover,
-.carousel-presentation::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Couleur de la barre de défilement au survol */
-}
-
-
-
-
-/* ******** scroll ********* */
 
 .carousel-ocr {
     display: flex;
@@ -213,18 +181,52 @@ h1 {
     position: relative;
     height: 480px;
 }
-/* .carousel-cv .carousel-item-cv {
-    
-    flex-wrap: wrap;
+
+.carousel-item-cv img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 150%;
+    object-fit: cover; 
+    z-index: 0; 
     overflow: hidden;
+}
+
+/* .carousel-item-cv img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    object-fit: cover;
 } */
 
-/* .carousel-cv .carousel-item-cv ul {
+.carousel-item-cv h2,
+.carousel-item-cv li {
+    position: relative;
+    z-index: 1; /* Assurez-vous que le texte est au-dessus de l'image */
+}
+
+.carousel-cv h2,
+.carousel-presentation h2 {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    overflow: hidden;
-} */
+    justify-content: center;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-cv li ,
+.carousel-presentation li {
+    display: flex;
+    /* justify-content: center; */
+    color: black;
+    margin: 10px auto;
+}
+
 
 .carousel-presentation {
     display: flex;
@@ -235,24 +237,53 @@ h1 {
     position: relative;
     height: 480px;
 }
-.carousel-cv h2,
-.carousel-presentation h2 {
-    display: flex;
-    justify-content: center;
-    color: black;
-}
 
-.carousel-cv li ,
-.carousel-presentation li {
-    display: flex;
-    /* justify-content: center; */
-    color: black;
-    margin: 10px auto;
-}
 .details-container {
     margin-top: 0px;
 }
 
+/* ******** scroll ********* */
+
+/* La scrollbar */
+.carousel-ocr::-webkit-scrollbar,
+.carousel-pro::-webkit-scrollbar,
+.carousel-cv::-webkit-scrollbar,
+.carousel-presentation::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+    height: 12px; /* Hauteur de la scrollbar horizontale (si vous en avez une) */
+}
+
+/* La partie déplaçable de la scrollbar (le "thumb") */
+.carousel-ocr::-webkit-scrollbar-thumb,
+.carousel-pro::-webkit-scrollbar-thumb,
+.carousel-cv::-webkit-scrollbar-thumb,
+.carousel-presentation::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Coins arrondis */
+    border: 3px solid #f0f0f0; /* Bordure autour de la barre de défilement */
+}
+
+/* La partie arrière de la scrollbar (le "track") */
+.carousel-ocr::-webkit-scrollbar-track,
+.carousel-pro::-webkit-scrollbar-track,
+.carousel-cv::-webkit-scrollbar-track,
+.carousel-presentation::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Couleur de la piste de défilement */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* La partie au survol de la scrollbar */
+.carousel-ocr::-webkit-scrollbar-thumb:hover,
+.carousel-pro::-webkit-scrollbar-thumb:hover,
+.carousel-cv::-webkit-scrollbar-thumb:hover,
+.carousel-presentation::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la barre de défilement au survol */
+}
+
+
+
+
+/* ******** scroll ********* */
 /* ********************* carousels contenair  ********************* */
 .links-container {
     display: flex;
