@@ -23,6 +23,24 @@ body {
     flex-direction: column;
     color: var(--text-color);
 }
+/* SCROLL BAR ----------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 80%;
+    
+    }
+    ::-webkit-scrollbar-track {
+    background: #0907103a;
+    border-radius: 15px;
+    height: 300px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #01bb0a94;
+    border-radius: 15px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    Background: #01bb0a
+    }
 
 nav {
     width: 100%;
@@ -138,7 +156,7 @@ h1 {
 }
 .carousel-cv .carousel-item-cv,
 .carousel-presentation .carousel-item-presentation {
-    overflow: scroll;    
+    overflow: auto;    
 }
 
 .carousel-item-cv {
