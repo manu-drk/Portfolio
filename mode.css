@@ -1,15 +1,5 @@
 @import url('variables.css');
 
-/* body.light-mode {
-    background-color: white;
-    color: black;
-}
-
-body.dark-mode {
-    background-color: black;
-    color: white;
-} */
-
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -22,7 +12,6 @@ body {
     width: 30px;
     height: 13px;
     background-color: var(--toggle-background); 
-    /* background-color: #ccc; */
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -32,10 +21,14 @@ body {
 
 #mode-toggle {
     width: 20px;
-    height: 19px;
+    height: 20px;
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body.light-mode #mode-toggle {
@@ -45,3 +38,12 @@ body.light-mode #mode-toggle {
 body.dark-mode #mode-toggle {
     transform: translateX(10px);
 }
+
+#mode-toggle::before {
+    content: var(--toggle-icon);
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+}
+

@@ -1,5 +1,6 @@
 :root {
-    --background-color: #021514;
+    /* --background-color: #021514; */
+    --background-image: url(../images/dark_fond_back.jpg);
     --text-color: #fff;
     --nav-background-color: #333;
     --nav-text-color: #fff;
@@ -14,11 +15,15 @@
     --tag-text-color: #fff;
     --tag-border-color: #11790d;
     --toggle-background: #28a745;
+    --toggle-icon: '☀️';
+    
 }
 
 /* Light mode variables */
 .light-mode {
     --background-color: #f5f5f5;
+    --background-image: url(../images/light_fond_back.jpg);
+    
     --text-color: #000;
     --nav-background-color: #ddd;
     --nav-text-color: #000;
@@ -34,4 +39,6 @@
     --tag-text-color: #000;
     --tag-border-color: #007bff;
     --toggle-background: #007bff;;
+    --toggle-icon: '🌙';
+    
 }
