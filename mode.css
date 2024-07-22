@@ -17,22 +17,22 @@ body {
 
 #mode-toggle-container {
     position: fixed;
-    top: 12px;
-    right: 85px;
-    width: 40px;
-    height: 15px;
+    top: 13px;
+    right: 110px;
+    width: 30px;
+    height: 13px;
     background-color: var(--toggle-background); 
     /* background-color: #ccc; */
     border-radius: 30px;
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 4px;
     cursor: pointer;
 }
 
 #mode-toggle {
     width: 20px;
-    height: 20px;
+    height: 19px;
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s;
@@ -43,5 +43,5 @@ body.light-mode #mode-toggle {
 }
 
 body.dark-mode #mode-toggle {
-    transform: translateX(20px);
+    transform: translateX(10px);
 }

@@ -138,6 +138,13 @@ h1 {
     overflow: scroll;    
 }
 
+.carousel-item-cv {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+    z-index: 3;
+    background-image: url(./images/light_mode_fond.jpg);
+    background-size: cover;
+}
 
 .carousel-ocr {
     display: flex;
@@ -182,7 +189,7 @@ h1 {
     height: 480px;
 }
 
-.carousel-item-cv img {
+/* .carousel-item-cv img {
     position: absolute; 
     top: 0;
     left: 0;
@@ -191,7 +198,7 @@ h1 {
     object-fit: cover; 
     z-index: 0; 
     overflow: hidden;
-}
+} */
 
 /* .carousel-item-cv img {
     width: 100%;

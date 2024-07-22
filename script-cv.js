@@ -132,9 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     title.innerText = item.title;
                     carouselItem.appendChild(title);
 
-                    const image = document.createElement('img');
-                    image.setAttribute('src', item.cover);
-                    carouselItem.appendChild(image);
+                    // const image = document.createElement('img');
+                    // image.setAttribute('src', item.cover);
+                    // carouselItem.appendChild(image);
                     
                     const descriptionList = document.createElement('ul');
                     item.description.forEach(desc => {
