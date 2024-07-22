@@ -1,20 +1,31 @@
 @import url('variables.css');
+
 @keyframes animate {
     to {
         box-shadow: 0 0 35px var(--carousel-shadow), 0 0 35px var(--carousel-shadow), 0 0 35px var(--carousel-shadow);
     }
 }
-body, h1, h2, h3, p, a, button, span, div {
+
+body,
+h1,
+h2,
+h3,
+p,
+a,
+button,
+span,
+div {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     /* background: var(--background-color); */
-    background-image: var(--background-image);
+    /* background-image: var(--background-image);
     background-size: cover;
-    background-position: center;
+    
+    background-position: center; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,24 +34,43 @@ body {
     flex-direction: column;
     color: var(--text-color);
 }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.8; Ajustez l'opacité selon vos besoins */
+    z-index: -1;
+}
+
+
 /* SCROLL BAR ----------------- */
 ::-webkit-scrollbar {
     width: 10px;
     height: 80%;
-    
-    }
-    ::-webkit-scrollbar-track {
-    background: #0907103a;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-background);
     border-radius: 15px;
     height: 300px;
-    }
-    ::-webkit-scrollbar-thumb {
-    background: #01bb0a94;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-background);
     border-radius: 15px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-    Background: #01bb0a
-    }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-background);
+}
 
 nav {
     width: 100%;
@@ -86,6 +116,7 @@ nav ul li.center {
 h1 {
     margin: 0;
 }
+
 /* ********************* carousels  ********************* */
 .carousel {
     display: flex;
@@ -103,7 +134,7 @@ h1 {
     margin: 0 10px;
     border-radius: 20px;
     border: 2px solid var(--carousel-border);
-    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);    
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
     /* animation: animate 2s infinite alternate; */
     transition: transform 0.5s, opacity 0.5s;
@@ -119,11 +150,35 @@ h1 {
     border-radius: 20px;
 }
 
-.carousel-item:nth-child(1) { transform: translateX(-300px) scale(0.8); opacity: 0.8; z-index: 2; }
-.carousel-item:nth-child(2) { transform: translateX(0px) scale(1); opacity: 1; z-index: 3; }
-.carousel-item:nth-child(3) { transform: translateX(300px) scale(0.8); opacity: 0.8; z-index: 2; }
-.carousel-item:nth-child(4) { transform: translateX(600px) scale(0.6); opacity: 0.6; z-index: 1; }
-.carousel-item:nth-child(5) { transform: translateX(-600px) scale(0.4); opacity: 0.4; z-index: 0; }
+.carousel-item:nth-child(1) {
+    transform: translateX(-300px) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item:nth-child(2) {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel-item:nth-child(3) {
+    transform: translateX(300px) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item:nth-child(4) {
+    transform: translateX(600px) scale(0.6);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.carousel-item:nth-child(5) {
+    transform: translateX(-600px) scale(0.4);
+    opacity: 0.4;
+    z-index: 0;
+}
 
 
 .carousel-ocr .carousel-item-ocr,
@@ -147,25 +202,29 @@ h1 {
     opacity: 0.6;
     background-color: white;
 }
+
 .carousel-item-pointer {
     cursor: pointer;
 }
+
 .carousel-ocr .carousel-item-ocr,
 .carousel-pro .carousel-item-pro {
     overflow: hidden;
 }
+
 .carousel-cv .carousel-item-cv,
 .carousel-presentation .carousel-item-presentation {
-    overflow: auto;    
+    overflow: auto;
 }
 
-.carousel-item-cv {
+/* .carousel-item-cv {
     transform: translateX(0px) scale(1);
     opacity: 1;
     z-index: 3;
     background-image: url(./images/light_mode_fond.jpg);
     background-size: cover;
-}
+    
+} */
 
 .carousel-ocr {
     display: flex;
@@ -178,11 +237,18 @@ h1 {
 }
 
 
-.carousel-item-ocr img {
+/* .carousel-item-ocr img {
     width: 600px;
     height: 400px;
     border-radius: 20px;
+} */
+.carousel-item-ocr img {
+    width: 587px;
+    height: 395px;
+    border-radius: 20px;
+    border: 7px solid white;
 }
+
 .carousel-pro {
     display: flex;
     overflow: hidden;
@@ -235,7 +301,8 @@ h1 {
 .carousel-item-cv h2,
 .carousel-item-cv li {
     position: relative;
-    z-index: 1; /* Assurez-vous que le texte est au-dessus de l'image */
+    z-index: 1;
+    /* Assurez-vous que le texte est au-dessus de l'image */
 }
 
 .carousel-cv h2,
@@ -247,7 +314,7 @@ h1 {
     z-index: 1;
 }
 
-.carousel-cv li ,
+.carousel-cv li,
 .carousel-presentation li {
     display: flex;
     /* justify-content: center; */
@@ -270,54 +337,14 @@ h1 {
     margin-top: 0px;
 }
 
-/* ******** scroll ********* */
 
-/* La scrollbar */
-.carousel-ocr::-webkit-scrollbar,
-.carousel-pro::-webkit-scrollbar,
-.carousel-cv::-webkit-scrollbar,
-.carousel-presentation::-webkit-scrollbar {
-    width: 12px; /* Largeur de la scrollbar */
-    height: 12px; /* Hauteur de la scrollbar horizontale (si vous en avez une) */
-}
-
-/* La partie déplaçable de la scrollbar (le "thumb") */
-.carousel-ocr::-webkit-scrollbar-thumb,
-.carousel-pro::-webkit-scrollbar-thumb,
-.carousel-cv::-webkit-scrollbar-thumb,
-.carousel-presentation::-webkit-scrollbar-thumb {
-    background: #888; /* Couleur de la barre de défilement */
-    border-radius: 10px; /* Coins arrondis */
-    border: 3px solid #f0f0f0; /* Bordure autour de la barre de défilement */
-}
-
-/* La partie arrière de la scrollbar (le "track") */
-.carousel-ocr::-webkit-scrollbar-track,
-.carousel-pro::-webkit-scrollbar-track,
-.carousel-cv::-webkit-scrollbar-track,
-.carousel-presentation::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Couleur de la piste de défilement */
-    border-radius: 10px; /* Coins arrondis */
-}
-
-/* La partie au survol de la scrollbar */
-.carousel-ocr::-webkit-scrollbar-thumb:hover,
-.carousel-pro::-webkit-scrollbar-thumb:hover,
-.carousel-cv::-webkit-scrollbar-thumb:hover,
-.carousel-presentation::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Couleur de la barre de défilement au survol */
-}
-
-
-
-
-/* ******** scroll ********* */
 /* ********************* carousels contenair  ********************* */
 .links-container {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+
 }
 
 .links-container a {
@@ -326,6 +353,11 @@ h1 {
     color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
+    background-color: var(--tag-background-color);
+    margin: 0 5px;
+    border-radius: 25px;
+    border: 2px solid var(--tag-border-color);
+    padding: 7px 15px;
 }
 
 .links-container a:hover {
@@ -352,6 +384,27 @@ h1 {
     border: 2px solid var(--tag-border-color);
 }
 
+button {
+    /* background-color: transparent; */
+    background-color: var(--tag-background-color);
+    margin: 0 10px;
+    font-size: 27px;
+    color: var(--link-color);
+    
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    /* border: none; */
+    border: 2px solid var(--tag-border-color);
+    padding: 7px 15px;
+
+}
+
+button:hover {
+    transform: scale(1);
+    text-shadow: 0 0 1px var(--link-hover-shadow);
+    cursor: pointer;
+}
 
 
 /* ********************* Modal styles ********************* */
@@ -364,8 +417,8 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
@@ -388,6 +441,7 @@ h1 {
 .modal-content p {
     color: black;
 }
+
 .close {
     color: #aaa;
     float: right;
@@ -407,22 +461,9 @@ h1 {
     margin: 20px 0;
 }
 
-
-button {
-    background-color: transparent;
-    margin: 0 10px;
-    font-size: 27px;
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-
-}
-
-button:hover {
-    transform: scale(1.2);
-    text-shadow: 0 0 1px var(--link-hover-shadow);
-    cursor: pointer;
+.blur {
+    filter: blur(1px);
+    transition: filter 0.5s;
 }
 
 

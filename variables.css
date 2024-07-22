@@ -1,44 +1,59 @@
 :root {
     /* --background-color: #021514; */
-    --background-image: url(../images/dark_fond_back.jpg);
+    --background-image: url(../images/dark1_fond_back.jpg);
     --text-color: #fff;
-    --nav-background-color: #333;
+    /* --nav-background-color: #333; */
+    --nav-background-color: #3333336b;
     --nav-text-color: #fff;
-    --link-color: #11790d;
+    /* --link-color: #11790d; */
+    --link-color: #ffffff;
     --link-hover-shadow: #4feb4a;
     --carousel-border: #4feb4a;
     --carousel-shadow: #11790d;
     --carousel-animation: animate 2s infinite alternate;
     --footer-background-color: #3333336b;
     --footer-text-color: #fff;
-    --tag-background-color: #333;
+    /* --tag-background-color: #333; */
+    /* --tag-background-color: #3333336b; */
+    --tag-background-color: #191818bf;    
     --tag-text-color: #fff;
     --tag-border-color: #11790d;
     --toggle-background: #28a745;
     --toggle-icon: '☀️';
+    --scrollbar-track-background: #0907103a;
+    --scrollbar-thumb-background: #01bb0a94;
+    --scrollbar-thumb-hover-background: #01bb0a;
     
 }
 
 /* Light mode variables */
 .light-mode {
     --background-color: #f5f5f5;
-    --background-image: url(../images/light_fond_back.jpg);
+    --background-image: url(../images/light1_fond_back.jpg);
     
     --text-color: #000;
-    --nav-background-color: #ddd;
+    /* --nav-background-color: #ddd; */
+    --nav-background-color: #3333336b;
     --nav-text-color: #000;
-    --link-color: #007bff;
+    /* --link-color: #007bff; */
+    --link-color: #000000;
     --link-hover-shadow: #0056b3;
     --carousel-border: #007bff;
     /* --carousel-shadow: none; */
     --carousel-shadow: #0707072c;
     --carousel-animation: none;   
     --footer-background-color: #ddd;
-    --footer-text-color: #000;
-    --tag-background-color: #ddd;
+    /* --footer-text-color: #000; */
+    --footer-background-color: #3333336b;
+    /* --tag-background-color: #ddd; */
+    --tag-background-color: #ffffffbf;
+    
     --tag-text-color: #000;
     --tag-border-color: #007bff;
     --toggle-background: #007bff;;
     --toggle-icon: '🌙';
+    --scrollbar-track-background: #ccc;
+    --scrollbar-thumb-background: #0056b3;
+    --scrollbar-thumb-hover-background: #007bff;
     
 }

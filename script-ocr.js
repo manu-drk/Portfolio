@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     items.forEach((item, i) => {
                         const pos = (i - index + totalItems) % totalItems;
+                        item.classList.remove('blur');
                         switch (pos) {
                             case 0:
                                 item.style.transform = 'translateX(-300px) scale(0.8)';
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 item.style.zIndex = 2;
                                 item.classList.add('carousel-item-pointer');
                                 item.onclick = () => moveOCRCarousel(-1);
+                                item.classList.add('blur');
                                 break;
                             case 1:
                                 item.style.transform = 'translateX(0px) scale(1)';
@@ -129,12 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 item.style.zIndex = 2;
                                 item.classList.add('carousel-item-pointer');
                                 item.onclick = () => moveOCRCarousel(1);
+                                item.classList.add('blur');
                                 break;
                             default:
                                 item.style.transform = 'translateX(0px) scale(0.4)';
                                 item.style.opacity = '0.4';
                                 item.style.zIndex = 0;
                                 item.onclick = null;
+                                item.classList.add('blur');
                                 break;
                         }
                     });

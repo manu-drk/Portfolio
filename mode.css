@@ -10,13 +10,14 @@ body {
     top: 13px;
     right: 110px;
     width: 30px;
-    height: 13px;
+    height: 15px;
     background-color: var(--toggle-background); 
     border-radius: 30px;
     display: flex;
     align-items: center;
     padding: 4px;
     cursor: pointer;
+    transform: scale(1);
 }
 
 #mode-toggle {
