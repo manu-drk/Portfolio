@@ -395,7 +395,10 @@ h1 {
     font-size: 16px;
     border: 2px solid var(--tag-border-color);
 }
-
+.tag:hover {
+    background-color: var(--tag-background-color-hover);  
+    border: 2px solid var(--tag-border-color-hover);
+}
 button {
     /* background-color: transparent; */
     background-color: var(--tag-background-color);
