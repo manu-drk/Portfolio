@@ -44,7 +44,7 @@ body.dark-mode #mode-toggle {
     content: var(--toggle-icon);
     position: absolute;
     width: 21px;
-    height: 21px;
+    height: 23px;
     border-radius: 50%;
 }
 

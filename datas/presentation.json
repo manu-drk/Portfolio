@@ -10,17 +10,24 @@
     {
 		"id": "51",
 		"title": "Motivation",        
-        "description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule etiam destinatis segetum pauloque esse etiam ulla x integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        "description": [
+            "Je suis actuellement en formation Développeur Web de niveau Bac +2 via l’école en ligne OpenClassrooms.",
+            "Ma formation a débuté le 22 février et se terminera le 21 août.",
+            "Durant cette formation, je me forme aux technologies et aux langages suivants :",
+            "HTML, CSS, JavaScript, React, Git/GitHub, NodeJS, LightHouse, Express, MongoDB, les API REST.",
+            "Lorsque j’étais gérant de mon salon de tatouage, j’ai conçu le site web du salon avec mes maigres connaissances et j’ai trouvé le développement web très intéressant et très vaste. C’est durant ma collaboration avec l’équipe informatique dans la société où je travaille actuellement que j’ai vraiment été séduit par ce domaine. On m’a prodigué des conseils sur les différentes étapes pour débuter. Peu de temps après, j’ai décidé de me lancer sérieusement et j’ai entrepris de suivre une formation diplômante à distance."
         ]
 	},
 	{
 		"id": "52",
 		"title": "Formation",        
-        "description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule etiam destinatis segetum pauloque esse etiam ulla x integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+        "description": [
+            "Je suis actuellement en formation Développeur Web de niveau Bac +2 via l’école en ligne OpenClassrooms.",
+            "Ma formation a débuté le 22 février et se terminera le 21 août.",
+            "Durant cette formation, je me forme aux technologies et aux langages suivants :",
+            "HTML, CSS, JavaScript, React, Git/GitHub, NodeJS, LightHouse, Express, MongoDB, les API REST.",
+            "Lorsque j’étais gérant de mon salon de tatouage, j’ai conçu le site web du salon avec mes maigres connaissances et j’ai trouvé le développement web très intéressant et très vaste. C’est durant ma collaboration avec l’équipe informatique dans la société où je travaille actuellement que j’ai vraiment été séduit par ce domaine. On m’a prodigué des conseils sur les différentes étapes pour débuter. Peu de temps après, j’ai décidé de me lancer sérieusement et j’ai entrepris de suivre une formation diplômante à distance.",
+            "Issue d’une formation informatique avec un CAP Agent de Maintenance de Matériel Bureautique et un Bac Pro Micro-informatique Réseau Installation Maintenance, j’ai poursuivi mon cursus dans le commerce avec un BTS Management des Unités Commerciales. Après 14 ans dans le commerce, j’ai souhaité retourner dans un secteur de cœur, l’informatique, en y mettant à profit toutes les compétences acquises lors de mes diverses expériences professionnelles."
         ]
 	}
 ]

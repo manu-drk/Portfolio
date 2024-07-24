@@ -15,10 +15,13 @@
     --footer-text-color: #fff;
     /* --tag-background-color: #333; */
     /* --tag-background-color: #3333336b; */
-    --tag-background-color: #191818bf;    
+    --tag-background-color: #191818bf;
+    --tag-background-color-hover: #191818;
     --tag-text-color: #fff;
     --tag-border-color: #11790d;
+    --tag-border-color-hover: #28a745;
     --toggle-background: #28a745;
+    
     --toggle-icon: '☀️';
     --scrollbar-track-background: #0907103a;
     --scrollbar-thumb-background: #01bb0a94;
@@ -47,10 +50,13 @@
     --footer-background-color: #3333336b;
     /* --tag-background-color: #ddd; */
     --tag-background-color: #ffffffbf;
+    --tag-background-color-hover: #ffffff;
     
     --tag-text-color: #000;
     --tag-border-color: #007bff;
-    --toggle-background: #007bff;;
+    --tag-border-color-hover: #0e81fc;
+    --toggle-background: #007bff;
+    
     --toggle-icon: '🌙';
     --scrollbar-track-background: #ccc;
     --scrollbar-thumb-background: #0056b3;

@@ -313,13 +313,22 @@ h1 {
     position: relative;
     z-index: 1;
 }
-
+.carousel-cv ul,
+.carousel-presentation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 550px;
+    margin: 15px auto;
+    padding: 10px;
+}
 .carousel-cv li,
 .carousel-presentation li {
     display: flex;
-    /* justify-content: center; */
+    justify-content: flex-start;
     color: black;
-    margin: 10px auto;
+    margin: 15px 0;
+    
 }
 
 
@@ -361,8 +370,11 @@ h1 {
 }
 
 .links-container a:hover {
-    transform: scale(1.2);
+    transform: scale(1);
     text-shadow: 0 0 1px var(--link-hover-shadow);
+    background-color: var(--tag-background-color-hover);
+    cursor: pointer;
+    border: 2px solid var(--tag-border-color-hover);
 }
 
 .tags-container {
@@ -403,7 +415,9 @@ button {
 button:hover {
     transform: scale(1);
     text-shadow: 0 0 1px var(--link-hover-shadow);
+    background-color: var(--tag-background-color-hover);
     cursor: pointer;
+    border: 2px solid var(--tag-border-color-hover);
 }
 
 
