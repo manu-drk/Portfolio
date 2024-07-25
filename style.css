@@ -543,11 +543,11 @@ footer p {
     }
 
     .prev_bouton {
-        left: 10px;
+        left: 55px;
     }
 
     .next_bouton {
-        right: 10px;
+        right: 55px;
     }
     /* .carousel-item:nth-child(n+2) {
         display: none;
@@ -608,11 +608,11 @@ footer p {
     }
 
     .carousel .prev {
-        left: 10px;
+        left: 55px;
     }
 
     .carousel .next {
-        right: 10px;
+        right: 55px;
     }
 
     .carousel .prev img, .carousel .next img {
