@@ -302,7 +302,7 @@ h1 {
 .carousel-item-cv li {
     position: relative;
     z-index: 1;
-    /* Assurez-vous que le texte est au-dessus de l'image */
+   
 }
 
 .carousel-cv h2,
@@ -484,7 +484,7 @@ button:hover {
 }
 
 
-/* ********************* Footes ********************* */
+/* ********************* Footer ********************* */
 
 footer {
     width: 100%;
@@ -504,4 +504,124 @@ footer p {
     font-size: 15px;
     margin: 0;
     color: var(--footer-text-color);
+}
+@media (max-width: 1024px) {
+   
+    .carousel-item {
+        display: none; /* Masquer tous les éléments par défaut */
+    }
+
+    .carousel-item.active {
+        display: block; /* Afficher l'élément actif */
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 3;
+    }
+
+    .carousel-item.previous {
+        display: block; /* Afficher l'élément précédent */
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0.8;
+        z-index: 2;
+    }
+
+    .carousel-item.next {
+        display: block; /* Afficher l'élément suivant */
+        transform: translateX(100%) scale(0.8);
+        opacity: 0.8;
+        z-index: 2;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 4; /* Assurez-vous que les boutons sont au-dessus des éléments du carrousel */
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+    /* .carousel-item:nth-child(n+2) {
+        display: none;
+    } */
+
+
+}
+@media (max-width: 380px) {
+
+    .details-container {
+        width: 80%;
+    }
+
+    .tags-container,.links-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+        align-content: center;
+        align-items: center;
+    }
+
+    .carousel-container {
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        width: 90%;
+    /* height: 400px; */
+        transform: translateX(-50%) scale(0.6);
+        opacity: 0.6;
+        position: absolute;
+        /* top: 50%; */
+        left: 50%;
+        z-index: 1;
+    }
+    .carousel-item.active {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    .carousel-item:nth-child(n+2) {
+        display: none;
+    }
+
+    .carousel .prev, .carousel .next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .carousel .prev {
+        left: 10px;
+    }
+
+    .carousel .next {
+        right: 10px;
+    }
+
+    .carousel .prev img, .carousel .next img {
+        width: 30px; /* Ajustez la taille des flèches */
+        height: auto;
+    }
+}
+
+/* Styles pour masquer les flèches sur les écrans plus grands */
+.carousel .prev, .carousel .next {
+    display: none;
 }
