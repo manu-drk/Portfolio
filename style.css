@@ -520,33 +520,33 @@ footer p {
 
     .carousel-item.previous {
         display: block; /* Afficher l'élément précédent */
-        transform: translateX(-100%) scale(0.8);
+        transform: translateX(0) scale(0.8);
         opacity: 0.8;
         z-index: 2;
     }
 
     .carousel-item.next {
         display: block; /* Afficher l'élément suivant */
-        transform: translateX(100%) scale(0.8);
+        transform: translateX(0) scale(0.8);
         opacity: 0.8;
         z-index: 2;
     }
 
-    .prev, .next {
+    .prev_bouton, .next_bouton {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        /* top: 50%; */
+        transform: translateY(0);
         background: none;
         border: none;
         cursor: pointer;
         z-index: 4; /* Assurez-vous que les boutons sont au-dessus des éléments du carrousel */
     }
 
-    .prev {
+    .prev_bouton {
         left: 10px;
     }
 
-    .next {
+    .next_bouton {
         right: 10px;
     }
     /* .carousel-item:nth-child(n+2) {

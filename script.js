@@ -78,12 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!carousel) return;
 
         const prevButton = document.createElement('button');
-        prevButton.classList.add('prev');
+        prevButton.classList.add('prev_bouton');
         prevButton.innerHTML = '<img src="./images/flech-prev.png" alt="Previous">';
         carousel.appendChild(prevButton);
 
         const nextButton = document.createElement('button');
-        nextButton.classList.add('next');
+        nextButton.classList.add('next_bouton');
         nextButton.innerHTML = '<img src="./images/flech-next.png" alt="Next">';
         carousel.appendChild(nextButton);
 
@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth <= 1024) {
             createArrowButtons();
         } else {
-            const prevButton = document.querySelector('.carousel .prev');
-            const nextButton = document.querySelector('.carousel .next');
+            const prevButton = document.querySelector('.carousel .prev_bouton');
+            const nextButton = document.querySelector('.carousel .next_bouton');
             if (prevButton) prevButton.remove();
             if (nextButton) nextButton.remove();
         }
