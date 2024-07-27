@@ -13,17 +13,24 @@ function showCarouselItem(index) {
             // Pour les petites tailles d'écran
             if (i === index) {
                 item.classList.add('active');
+                item.onclick = () => goTo(item.getAttribute('data-link'));
             } else {
                 item.classList.add('inactive');
+                item.onclick = null;
             }
         } else if (window.innerWidth <= 1024) {
             // Pour les écrans intermédiaires
             if (i === index) {
                 item.classList.add('active');
+                item.onclick = () => goTo(item.getAttribute('data-link'));
             } else if (i === (index - 1 + totalItems) % totalItems) {
                 item.classList.add('previous');
+                item.onclick = () => moveCarousel(-1);
             } else if (i === (index + 1) % totalItems) {
                 item.classList.add('next');
+                item.onclick = () => moveCarousel(1);
+            } else {
+                item.onclick = null;
             }
         } else {
             // Pour les écrans plus grands
@@ -64,7 +71,7 @@ function moveCarousel(direction) {
     showCarouselItem(currentIndex);
 }
 
-function goTo(url, target) {
+function goTo(url, target = '_self') {
     if (target === '_blank') {
         window.open(url, '_blank');
     } else {
@@ -120,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showCarouselItem(currentIndex);
     });
 });
+
 
 
 // **********************************************
@@ -242,135 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 
-//************************************
 
-//fonction pas ouf
-
-// function returnToHome() {
-//     window.location.href = 'index.html';
-// }
-
-// function goBack() {
-//     console.log('goBack called');
-//     history.back();
-// }
-
-// let currentIndex = 0;
-
-// function showCarouselItem(index) {
-//     const items = document.querySelectorAll('.carousel-item');
-//     const totalItems = items.length;
-//     items.forEach((item, i) => {
-//         item.classList.remove('active', 'previous', 'next', 'inactive');
-//         const pos = (i - index + totalItems) % totalItems;
-
-//         if (window.innerWidth <= 380) {
-//             // Pour les petites tailles d'écran
-//             if (i === index) {
-//                 item.classList.add('active');
-//             } else {
-//                 item.classList.add('inactive');
-//             }
-//         } else if (window.innerWidth <= 1024) {
-//             // Pour les écrans intermédiaires
-//             if (i === index) {
-//                 item.classList.add('active');
-//             } else if (i === (index - 1 + totalItems) % totalItems) {
-//                 item.classList.add('previous');
-//             } else if (i === (index + 1) % totalItems) {
-//                 item.classList.add('next');
-//             }
-//         } else {
-//             // Pour les écrans plus grands
-//             switch (pos) {
-//                 case 0:
-//                     item.style.transform = 'translateX(-300px) scale(0.8)';
-//                     item.style.opacity = '0.8';
-//                     item.style.zIndex = 2;
-//                     item.onclick = () => moveCarousel(-1);
-//                     break;
-//                 case 1:
-//                     item.style.transform = 'translateX(0px) scale(1)';
-//                     item.style.opacity = '1';
-//                     item.style.zIndex = 3;
-//                     item.classList.add('active');
-//                     item.onclick = () => goTo(item.getAttribute('data-link'));
-//                     break;
-//                 case 2:
-//                     item.style.transform = 'translateX(300px) scale(0.8)';
-//                     item.style.opacity = '0.8';
-//                     item.style.zIndex = 2;
-//                     item.onclick = () => moveCarousel(1);
-//                     break;
-//                 default:
-//                     item.style.transform = 'translateX(0px) scale(0.4)';
-//                     item.style.opacity = '0.4';
-//                     item.style.zIndex = 0;
-//                     item.onclick = null;
-//                     break;
-//             }
-//         }
-//     });
-// }
-
-// function moveCarousel(direction) {
-//     const items = document.querySelectorAll('.carousel-item');
-//     currentIndex = (currentIndex + direction + items.length) % items.length;
-//     showCarouselItem(currentIndex);
-// }
-
-// function goTo(url, target) {
-//     if (target === '_blank') {
-//         window.open(url, '_blank');
-//     } else {
-//         window.location.href = url;
-//     }
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     showCarouselItem(currentIndex);
-
-//     function createArrowButtons() {
-//         const carousel = document.querySelector('.carousel');
-//         if (!carousel) return;
-
-//         const prevButton = document.createElement('button');
-//         prevButton.classList.add('prev');
-//         prevButton.innerHTML = '<img src="./images/flech-prev.png" alt="Previous">';
-//         carousel.appendChild(prevButton);
-
-//         const nextButton = document.createElement('button');
-//         nextButton.classList.add('next');
-//         nextButton.innerHTML = '<img src="./images/flech-next.png" alt="Next">';
-//         carousel.appendChild(nextButton);
-
-//         prevButton.addEventListener('click', () => {
-//             moveCarousel(-1);
-//         });
-
-//         nextButton.addEventListener('click', () => {
-//             moveCarousel(1);
-//         });
-//     }
-
-//     if (window.innerWidth <= 1024) {
-//         createArrowButtons();
-//     }
-
-//     window.addEventListener('resize', () => {
-//         if (window.innerWidth <= 1024) {
-//             createArrowButtons();
-//         } else {
-//             const prevButton = document.querySelector('.carousel .prev');
-//             const nextButton = document.querySelector('.carousel .next');
-//             if (prevButton) prevButton.remove();
-//             if (nextButton) nextButton.remove();
-//         }
-//         showCarouselItem(currentIndex);
-//     });
-// });
-
-// *********************************************
 
 // teste media quiery 1
 
