@@ -53,7 +53,9 @@
 .carousel-item-ocr {
     display: none; /* Masquer tous les éléments par défaut */
 }
-
+.carousel-item-ocr.initial {
+    display: block;
+}
 .carousel-item-ocr.active {
     display: block; /* Afficher l'élément actif */
     transform: translateX(0) scale(1);
@@ -62,7 +64,7 @@
 }
 
 .carousel-item-ocr.previous {
-    display: block; /* Afficher l'élément précédent */
+    display: block; 
     transform: translateX(0) scale(0.8);
     opacity: 0.8;
     z-index: 2;
