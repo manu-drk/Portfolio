@@ -14,7 +14,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--background-color); /* Remplace l'image de fond par une couleur unie */
+        background-color: var(--background-color);  
         background-size: cover;
         background-image: none;
         background-position: center;
@@ -22,15 +22,15 @@
     }
 
 
-    /* ****************** carousel base ***************** */
+/**********          Carousel Index          **********/
+
+
     .carousel-container {
         margin-bottom:580px 
     } 
 
-    .carousel-container-presentation {
-        margin-bottom:580px 
-    }
-     
+    
+
     .carousel-item {
         display: none; 
     }
@@ -56,16 +56,81 @@
         z-index: 2;
     }
 
-/* ********************************************** carousel ocr*/
+/**********          Carousel Cv          **********/
+
+.carousel-container-cv {
+    margin-bottom: 580px;
+}
+.carousel-item-cv {
+    display: none; 
+}
+.carousel-item-cv.initial {
+    display: block;
+}
+.carousel-item-cv.active {
+    display: block;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel-item-cv.previous {
+    display: block; 
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item-cv.next {
+    display: block; 
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+/**********          Carousel Présentation          **********/
+
+.carousel-container-presentation {
+    margin-bottom: 580px; 
+}
+.carousel-item-presentation {
+    display: none; 
+}
+.carousel-item-presentation.initial {
+    display: block;
+}
+.carousel-item-presentation.active {
+    display: block;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel-item-ocr.previous {
+    display: block; 
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item-presentation.next {
+    display: block; 
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+
+/**********          Carousel Ocr          **********/
 
 .carousel-item-ocr {
-    display: none; /* Masquer tous les éléments par défaut */
+    display: none; 
 }
 .carousel-item-ocr.initial {
     display: block;
 }
 .carousel-item-ocr.active {
-    display: block; /* Afficher l'élément actif */
+    display: block; 
     transform: translateX(0) scale(1);
     opacity: 1;
     z-index: 3;
@@ -85,13 +150,68 @@
     z-index: 2;
 }
 
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    /* align-content: center; */
+    /* align-items: center; */
+    width: 320px;
+}
+
+.links-container a {
+    text-align: center;
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 35px;
+    /* align-content: center; */
+    /* align-items: center; */
+    width: 320px;
+}
 
 
+.tag {
+    text-align: center;
+}
 
+/**********          Carousel Pro          **********/
 
+.carousel-item-pro {
+    display: none; 
+}
+.carousel-item-pro.initial {
+    display: block;
+}
+.carousel-item-pro.active {
+    display: block; 
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
 
+.carousel-item-pro.previous {
+    display: block; 
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
 
-    /* bouton previous et next  */
+.carousel-item-pro.next {
+    display: block; /* Afficher l'élément suivant */
+    transform: translateX(0) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+/**********          bouton previous et next          **********/
+
 
 
     .prev_bouton, .next_bouton {
@@ -105,7 +225,7 @@
         z-index: 4; /* Assurez-vous que les boutons sont au-dessus des éléments du carrousel */
     }
     .prev_bouton:hover, .next_bouton:hover {
-       
+    
         background: var(--scrollbar-thumb-background);
         
     }
@@ -129,36 +249,14 @@
         min-height: 580px;
     }
 
-    .tags-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        margin-top: 10px;
-        /* align-content: center; */
-        /* align-items: center; */
-        width: 320px;
-    }
-    .links-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        margin-top: 10px;
-        /* align-content: center; */
-        /* align-items: center; */
-        width: 320px;
-    }
-
-    .links-container a {
-        text-align: center;
-    }
-
-    .tag {
-        text-align: center;
-    }
+    
 
 }
+
+
+
+/**********          Mobile          **********/
+
 
 @media (max-width: 380px) {
 

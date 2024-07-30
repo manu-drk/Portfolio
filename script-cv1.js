@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
-    fetch('datas/presentation.json')
+    fetch('datas/cv.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            console.log('Présentation data loaded:', data);
+            console.log('Cv data loaded:', data);
 
-            const carouselContainer = document.querySelector('.carousel-presentation');
+            const carouselContainer = document.querySelector('.carousel-cv');
 
             // Créer et ajouter le conteneur de titre avant le conteneur du carousel
             const titleContainer = document.createElement('div');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.forEach((item, index) => {
                 const carouselItem = document.createElement('div');
-                carouselItem.classList.add('carousel-item-presentation');
+                carouselItem.classList.add('carousel-item-cv');
                 carouselItem.setAttribute('data-link', item.link);
                 carouselItem.setAttribute('data-title', item.title);
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 carouselContainer.appendChild(carouselItem);
             });
 
-            showPresentationCarouselItem(currentIndex);
+            showCvCarouselItem(currentIndex);
 
             if (window.innerWidth <= 1024) {
                 createArrowButtons();
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     prevButton = null;
                     nextButton = null;
                 }
-                showPresentationCarouselItem(currentIndex);
+                showCvCarouselItem(currentIndex);
             });
         })
         .catch(error => console.error('Error loading JSON:', error));
@@ -68,8 +68,8 @@ let currentIndex = 0;
 let prevButton = null;
 let nextButton = null;
 
-function showPresentationCarouselItem(index) {
-    const items = document.querySelectorAll('.carousel-item-presentation');
+function showCvCarouselItem(index) {
+    const items = document.querySelectorAll('.carousel-item-cv');
     const totalItems = items.length;
     const titleElement = document.querySelector('.carousel-title h1');
 
@@ -135,9 +135,9 @@ function showPresentationCarouselItem(index) {
 }
 
 function moveCarousel(direction) {
-    const items = document.querySelectorAll('.carousel-item-presentation');
+    const items = document.querySelectorAll('.carousel-item-cv');
     currentIndex = (currentIndex + direction + items.length) % items.length;
-    showPresentationCarouselItem(currentIndex);
+    showCvCarouselItem(currentIndex);
 }
 
 function goTo(url, target = '_self') {
@@ -149,7 +149,7 @@ function goTo(url, target = '_self') {
 }
 
 function createArrowButtons() {
-    const carousel = document.querySelector('.carousel-presentation');
+    const carousel = document.querySelector('.carousel-cv');
     if (!carousel) return;
 
     if (prevButton) prevButton.remove();
@@ -178,7 +178,7 @@ function createArrowButtons() {
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('DOM fully loaded and parsed');
 
-//     fetch('datas/presentation.json')
+//     fetch('datas/cv.json')
 //         .then(response => {
 //             if (!response.ok) {
 //                 throw new Error('Network response was not ok ' + response.statusText);
@@ -186,9 +186,9 @@ function createArrowButtons() {
 //             return response.json();
 //         })
 //         .then(data => {
-//             console.log('Présentation data loaded:', data);
+//             console.log('Cv data loaded:', data);
 
-//             const carouselContainer = document.querySelector('.carousel-presentation');
+//             const carouselContainer = document.querySelector('.carousel-cv');
 
 //             // Créer et ajouter le conteneur de titre avant le conteneur du carousel
 //             const titleContainer = document.createElement('div');
@@ -199,7 +199,7 @@ function createArrowButtons() {
 
 //             data.forEach((item, index) => {
 //                 const carouselItem = document.createElement('div');
-//                 carouselItem.classList.add('carousel-item-presentation');
+//                 carouselItem.classList.add('carousel-item-cv');
 //                 carouselItem.setAttribute('data-link', item.link);
 //                 carouselItem.setAttribute('data-title', item.title);
 
@@ -224,7 +224,7 @@ function createArrowButtons() {
 //                 carouselContainer.appendChild(carouselItem);
 //             });
 
-//             showPresentationCarouselItem(currentIndex);
+//             showCvCarouselItem(currentIndex);
 
 //             if (window.innerWidth <= 1024) {
 //                 createArrowButtons();
@@ -239,7 +239,7 @@ function createArrowButtons() {
 //                     prevButton = null;
 //                     nextButton = null;
 //                 }
-//                 showPresentationCarouselItem(currentIndex);
+//                 showCvCarouselItem(currentIndex);
 //             });
 //         })
 //         .catch(error => console.error('Error loading JSON:', error));
@@ -249,8 +249,8 @@ function createArrowButtons() {
 // let prevButton = null;
 // let nextButton = null;
 
-// function showPresentationCarouselItem(index) {
-//     const items = document.querySelectorAll('.carousel-item-presentation');
+// function showCvCarouselItem(index) {
+//     const items = document.querySelectorAll('.carousel-item-cv');
 //     const totalItems = items.length;
 //     const titleElement = document.querySelector('.carousel-title h1');
 
@@ -316,9 +316,9 @@ function createArrowButtons() {
 // }
 
 // function moveCarousel(direction) {
-//     const items = document.querySelectorAll('.carousel-item-presentation');
+//     const items = document.querySelectorAll('.carousel-item-cv');
 //     currentIndex = (currentIndex + direction + items.length) % items.length;
-//     showPresentationCarouselItem(currentIndex);
+//     showCvCarouselItem(currentIndex);
 // }
 
 // function goTo(url, target = '_self') {
@@ -330,7 +330,7 @@ function createArrowButtons() {
 // }
 
 // function createArrowButtons() {
-//     const carousel = document.querySelector('.carousel-presentation');
+//     const carousel = document.querySelector('.carousel-cv');
 //     if (!carousel) return;
 
 //     if (prevButton) prevButton.remove();
@@ -354,5 +354,3 @@ function createArrowButtons() {
 //         moveCarousel(1);
 //     });
 // }
-
-
