@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     items.forEach((item, i) => {
                         const pos = (i - index + totalItems) % totalItems;
-                        item.classList.remove('blur', 'active', 'previous', 'next', 'inactive', 'initial'); // Retirer 'initial'
+                        item.classList.remove('blur', 'active', 'previous', 'next', 'inactive', 'initial'); 
                         switch (pos) {
                             case 0:
                                 item.style.transform = 'translateX(-300px) scale(0.8)';
@@ -200,16 +200,26 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (i === currentIndexOCR) {
                                 item.classList.add('active');
                                 item.onclick = () => goTo(item.getAttribute('data-link'));
-                            } else if (i === (currentIndexOCR - 1 + items.length) % items.length) {
-                                item.classList.add('previous');
-                                item.onclick = () => moveOCRCarousel(-1);
-                            } else if (i === (currentIndexOCR + 1) % items.length) {
-                                item.classList.add('next');
-                                item.onclick = () => moveOCRCarousel(1);
                             } else {
+                                item.classList.add('inactive');
                                 item.onclick = null;
                             }
                         });
+                    // } else if (window.innerWidth <= 1024) {
+                    //     items.forEach((item, i) => {
+                    //         if (i === currentIndexOCR) {
+                    //             item.classList.add('active');
+                    //             item.onclick = () => goTo(item.getAttribute('data-link'));
+                    //         } else if (i === (currentIndexOCR - 1 + items.length) % items.length) {
+                    //             item.classList.add('previous');
+                    //             item.onclick = () => moveOCRCarousel(-1);
+                    //         } else if (i === (currentIndexOCR + 1) % items.length) {
+                    //             item.classList.add('next');
+                    //             item.onclick = () => moveOCRCarousel(1);
+                    //         } else {
+                    //             item.onclick = null;
+                    //         }
+                    //     });
                     } else {
                         showOCRCarouselItem(currentIndexOCR);
                     }

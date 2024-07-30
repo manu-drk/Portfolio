@@ -91,16 +91,24 @@ function showPresentationCarouselItem(index) {
             if (i === index) {
                 item.classList.add('active');
                 item.onclick = () => goTo(item.getAttribute('data-link'));
-            } else if (i === (index - 1 + totalItems) % totalItems) {
-                item.classList.add('previous');
-                item.onclick = () => moveCarousel(-1);
-            } else if (i === (index + 1) % totalItems) {
-                item.classList.add('next');
-                item.onclick = () => moveCarousel(1);
             } else {
                 item.classList.add('inactive');
                 item.onclick = null;
             }
+        // } else if (window.innerWidth <= 1024) {
+        //     if (i === index) {
+        //         item.classList.add('active');
+        //         item.onclick = () => goTo(item.getAttribute('data-link'));
+        //     } else if (i === (index - 1 + totalItems) % totalItems) {
+        //         item.classList.add('previous');
+        //         item.onclick = () => moveCarousel(-1);
+        //     } else if (i === (index + 1) % totalItems) {
+        //         item.classList.add('next');
+        //         item.onclick = () => moveCarousel(1);
+        //     } else {
+        //         item.classList.add('inactive');
+        //         item.onclick = null;
+        //     }
         } else {
             switch (pos) {
                 case 0:

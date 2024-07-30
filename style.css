@@ -361,6 +361,7 @@ main.main-container {
     width: 600px;
     height: 400px;
     border-radius: 20px;
+    border: 7px solid white;
 }
 
 .carousel-cv {
@@ -602,4 +603,8 @@ footer p {
     font-size: 15px;
     margin: 0;
     color: var(--footer-text-color);
+}
+
+.carousel .prev, .carousel .next {
+    display: none;
 }
