@@ -23,6 +23,14 @@
 
 
     /* ****************** carousel base ***************** */
+    .carousel-container {
+        margin-bottom:580px 
+    } 
+
+    .carousel-container-presentation {
+        margin-bottom:580px 
+    }
+     
     .carousel-item {
         display: none; 
     }
@@ -48,7 +56,7 @@
         z-index: 2;
     }
 
-/* ********************************************** */
+/* ********************************************** carousel ocr*/
 
 .carousel-item-ocr {
     display: none; /* Masquer tous les éléments par défaut */
@@ -115,8 +123,10 @@
     .details-container {
         width: 80%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        max-height: 580px;
+        min-height: 580px;
     }
 
     .tags-container {
@@ -149,12 +159,19 @@
     }
 
 }
+
 @media (max-width: 380px) {
 
     .details-container {
         width: 80%;
     }
-
+    .carousel-container {
+        margin-bottom:500px 
+    }
+    .carousel-container-presentation {
+        margin-bottom:500px 
+    }
+    
     .tags-container,.links-container {
         display: flex;
         flex-direction: column;

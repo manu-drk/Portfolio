@@ -158,6 +158,21 @@ main.main-container {
     margin-top: 60px; /* Marge en haut pour éviter le chevauchement avec la barre de navigation */
     margin-bottom: 48px; 
 }
+.carousel-container-presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    /* overflow: hidden;  */
+    position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 60px; /* Marge en haut pour éviter le chevauchement avec la barre de navigation */
+    margin-bottom: 48px; 
+}
 .carousel {
     display: flex;
     align-items: center;
