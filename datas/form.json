@@ -1,0 +1,25 @@
+{
+    "form": {
+    "title": "Formulaire de Contact",
+    "fields": [
+        {
+        "label": "Nom",
+        "type": "text",
+        "name": "nom",
+        "placeholder": "Entrez votre nom"
+        },
+        {
+        "label": "Email",
+        "type": "email",
+        "name": "email",
+        "placeholder": "Entrez votre email"
+        },
+        {
+        "label": "Message",
+        "type": "textarea",
+        "name": "message",
+        "placeholder": "Entrez votre message"
+        }
+    ]
+    }
+}

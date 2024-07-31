@@ -140,8 +140,8 @@ main.main-container {
     padding: 20px; 
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 60px; 
-    margin-bottom: 48px; 
+    margin-top: 50px;  
+    margin-bottom: 15px; 
 }
 
 .carousel-container-ocr {
@@ -156,8 +156,8 @@ main.main-container {
     padding: 20px; 
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 60px; 
-    margin-bottom: 48px; 
+    margin-top: 50px; 
+    margin-bottom: 15px;  
 }
 .carousel-container-pro {
     display: flex;
@@ -171,8 +171,8 @@ main.main-container {
     padding: 20px; 
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 60px; 
-    margin-bottom: 48px; 
+    margin-top: 50px; 
+    margin-bottom: 15px; 
 }
 
 .carousel-container-presentation {
@@ -187,8 +187,8 @@ main.main-container {
     padding: 20px; 
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 60px; 
-    margin-bottom: 48px; 
+    margin-top: 50px;  
+    margin-bottom: 15px; 
 }
 
 .carousel-container-cv {
@@ -203,8 +203,25 @@ main.main-container {
     padding: 20px; 
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 60px; 
-    margin-bottom: 48px; 
+    margin-top: 50px; 
+    margin-bottom: 15px; 
+    /* margin-bottom: 48px;  */
+}
+
+.carousel-container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    /* overflow: hidden;  */
+    position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 50px;  
+    margin-bottom: 15px; 
 }
 .carousel {
     display: flex;
@@ -299,7 +316,24 @@ main.main-container {
     opacity: 0.6;
     background-color: white;
 }
-
+.carousel-form {
+    width: 600px;
+    height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid var(--carousel-border);
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
+    animation: var(--carousel-animation);
+    transition: transform 0.5s, opacity 0.5s;
+    /* overflow: scroll;     */
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    /* cursor: pointer; */
+    position: absolute;
+    transform: scale(0.6);
+    opacity: 0.6;
+    background-color: white;
+}
 .carousel-item-pointer {
     cursor: pointer;
 }

@@ -219,7 +219,17 @@
 
     /**********          Carousel Pro          **********/
 
-    .carousel-item-pro {
+    carousel-item-pro {
+        transform: none;
+        opacity: 1;
+        position: relative;
+    }
+
+    .carousel-item-pro img {
+        width: 100%;
+        height: auto;
+    }
+    /* .carousel-item-pro {
         display: none;
     }
 
@@ -243,11 +253,11 @@
 
     .carousel-item-pro.next {
         display: block;
-        /* Afficher l'élément suivant */
+        
         transform: translateX(0) scale(0.8);
         opacity: 0.8;
         z-index: 2;
-    }
+    } */
 
     /**********          bouton previous et next          **********/
 
