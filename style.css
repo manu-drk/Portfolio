@@ -316,24 +316,7 @@ main.main-container {
     opacity: 0.6;
     background-color: white;
 }
-.carousel-form {
-    width: 600px;
-    height: 400px;
-    margin: 0 10px;
-    border-radius: 20px;
-    border: 1px solid var(--carousel-border);
-    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
-    animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;
-    /* overflow: scroll;     */
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
-    /* cursor: pointer; */
-    position: absolute;
-    transform: scale(0.6);
-    opacity: 0.6;
-    background-color: white;
-}
+
 .carousel-item-pointer {
     cursor: pointer;
 }
@@ -614,7 +597,85 @@ button:hover {
     filter: blur(1px);
     transition: filter 0.5s;
 }
+/* ********************* Form ********************* */
+.carousel-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid var(--carousel-border);
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
+    animation: var(--carousel-animation);
+    transition: transform 0.5s, opacity 0.5s;
+    /* overflow: scroll;     */
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    /* cursor: pointer; */
+    position: absolute;
+    /* transform: scale(0.6); */
+    opacity: 1;
+    background-color: white;
+}
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.form-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+/* Styles pour les champs du formulaire */
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--carousel-border);
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.form-field textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Style pour le bouton de soumission */
+.carousel-form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--tag-border-color);
+    background-color: var(--tag-background-color);
+    color: var(--link-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.carousel-form button:hover {
+    background-color: var(--tag-background-color-hover);
+    border-color: var(--tag-border-color-hover);
+    color: var(--link-hover-shadow);
+}
 
 /* ********************* Footer ********************* */
 
