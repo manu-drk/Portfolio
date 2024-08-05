@@ -2,13 +2,13 @@
 	{
 		"id": "20",
 		"title": "Curriculum Vitae",        
-        "cover": "./images/cv.jpg",
+        "cover": "./images/cv1.jpg",
         "link": "./page1_Curriculum.html"	
 	},
     {
 		"id": "21",
 		"title": "Présentation",        
-        "cover": "./images/presentation.jpg",
+        "cover": "./images/presentation1.jpg",
         "link": "./page2_Presentation.html"	             
     },
     {
