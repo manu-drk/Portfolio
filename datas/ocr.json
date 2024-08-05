@@ -16,13 +16,19 @@
             "Rich Snippets",
             "Figma"
 		],
-		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"description": ["Je suis développeur freelance et j'ai décidé de proposer mes services d’optimisation SEO à de nouveaux clients.",
+        "Nina a répondu favorablement à ma demande et a convenu d’un rendez-vous téléphonique pour discuter des détails de l’optimisation de son site.", 
+        "Pour résumer le cadre de ma mission, je vais donc :",
+        "Faire une optimisation globale du site, tant sur les performances que sur le SEO.",
+        "Mettre en place le référencement local en utilisant Schema.org.",
+        "Ajouter les metas pour les réseaux sociaux.",
+        "Faire les modifications liées à l’accessibilité du site.",
+        "Produire un rapport d’optimisation présentant toutes mes actions et leur impact."
         ],
-		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"competences":[
+            "Au cours de ce projet, j'ai acquis des compétences en optimisation globale des sites, couvrant à la fois les performances et le SEO.",
+            "J'ai appris à mettre en place le référencement local en utilisant Schema.org, et à développer des compétences dans l'ajout de metas pour les réseaux sociaux.",
+            "De plus, j'ai amélioré mes compétences en accessibilité web et produit des rapports d’optimisation détaillant toutes les actions entreprises et leur impact."
         ]
 	},
     {
@@ -40,13 +46,15 @@
             "Figma",
             "GitHub"            
 		],
-		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"description": ["Kasa est une entreprise de location d’appartements entre particuliers, leader en France avec plus de 500 annonces postées chaque jour.",
+        "En tant que développeur front-end freelance, j'ai l'opportunité de renforcer mon portfolio en développant l'ensemble de l'application React. Je dois créer les composants React, configurer les routes avec React Router, et suivre les maquettes Figma de manière responsive avec un code de qualité.",
+        "J'ai travaillé avec les données fournies dans un fichier JSON pour construire le front-end. Les contraintes techniques incluent le respect des coding guidelines de Kasa et l'utilisation de Create React App pour créer les applications React. Les contraintes fonctionnelles spécifient que pour la galerie de photos (composant Gallery), l'utilisateur doit pouvoir naviguer circulairement entre les images et que la galerie doit conserver la hauteur indiquée sur la maquette Figma, avec les images coupées et centrées.",
+        "De plus, les Collapses doivent être fermés par défaut, s'ouvrant ou se fermant en fonction des clics des utilisateurs."
         ],
-		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"competences":["Au cours du développement de l'application Kasa, j'ai acquis plusieurs compétences importantes en front-end.",
+        "J'ai maîtrisé la création de composants React et la gestion des routes avec React Router, tout en respectant les maquettes Figma pour garantir un design responsive et de qualité.",
+        "En travaillant sans back-end fonctionnel, j'ai utilisé un fichier JSON pour construire le front-end.",
+        "J'ai également suivi les coding guidelines de Kasa et utilisé Create React App pour structurer l'application. J'ai mis en œuvre des fonctionnalités spécifiques telles que la navigation circulaire dans la galerie de photos, la gestion des Collapses avec des comportements interactifs selon les clics des utilisateurs, et assuré que l'interface reste conforme aux contraintes fonctionnelles et techniques établies."
         ]
 	},
     {
@@ -71,11 +79,11 @@
         "la page de connexion de l'administrateur du site (le client) (code à créer de zéro).",
         "a modale permettant d'uploader de nouveaux médias (code à créer from scratch)."
         ],
-		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"competences": ["Dans le cadre de mon travail comme développeur front-end pour l’agence ArchiWebos, j'ai développé plusieurs compétences essentielles.",
+        "J'ai conçu la page de présentation des travaux de l'architecte à partir du HTML fourni, ainsi que la page de connexion de l'administrateur du site, que j'ai codée depuis zéro. J'ai également créé une modale permettant d'uploader de nouveaux travaux.",
+        "En plus de ces tâches, j'ai acquis des compétences en récupération des données utilisateurs via des formulaires en JavaScript, en manipulation des éléments du DOM, et en gestion des événements utilisateurs avec JavaScript."
         ]
-	},
+    },
     {
 		"id": "4",
 		"title": "Booki",
@@ -92,9 +100,10 @@
         "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
         "Vous êtes chargé d'intégrer l'interface du site avec du code HTML et CSS. Pour cela, vous travaillez en étroite collaboration avec Sarah, la CTO, et Loïc, l’UI designer. "
         ],
-		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"competences":[
+            "Dans ce projet, j'ai acquis des compétences en intégration de contenu selon une maquette avec HTML et CSS.",
+            "J'ai également appris à créer des interfaces responsives, assurant une bonne adaptation du site sur différents appareils.",
+            "Cette expérience m'a permis de développer une meilleure compréhension des besoins d'une start-up et d'améliorer la qualité visuelle et fonctionnelle des sites web."
         ]
 	},
     {
@@ -113,13 +122,13 @@
             "GitHub",
             "API"          
 		],
-		"description": ["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"description": ["Je suis développeur back-end freelance depuis un an dans la région de Lille. J'ai l'habitude de travailler avec Kévin, un développeur front-end plus expérimenté et bien connecté dans le milieu.",
+        "Kévin m'a contacté pour que nous mutualisions nos compétences front-end et back-end sur un nouveau projet. Il s'agit d'une petite chaîne de librairies souhaitant lancer un site de référencement et de notation de livres, nommé Mon Vieux Grimoire.",
+        "Le site permettra aux membres d'ajouter des livres et de les noter publiquement. Kévin se chargera du développement front-end en React, tandis que je m'occuperai du back-end.",
+        "Pour que le projet respecte les bonnes pratiques du Green Code, je dois optimiser les images envoyées par les utilisateurs, car il y en aura beaucoup."
         ],
-		"competences":["Ulla integre ex consule mora iam textum novimus Romano cum ex inopia  ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consia actitatum indolis viri esse ex sine ulla actitatum etiam destinatis segetum pauloque esse etiam ulla victus cum restituit praeclarae ex integre Romano hunc ulla Romano cum Romano indolis.",
-        "Ulla integre ex consule mora iam textum novimus Romano cum ex inopia actitatum indolis"
+		"competences":["Dans le cadre du développement du site Mon Vieux Grimoire, j'ai acquis plusieurs compétences clés en back-end. J'ai travaillé avec Node.js pour développer les fonctionnalités du site, tout en mettant en place un modèle logique de données conforme à la réglementation.",
+        "J'ai assuré la mise en œuvre sécurisée des opérations CRUD pour gérer les livres et les notes, ainsi que le stockage sécurisé des données, y compris le hashage des mots de passe. J'ai utilisé MongoDB comme base de données pour stocker les informations, et implémenté une authentification sécurisée avec des tokens JWT pour garantir la sécurité des connexions des membres."
         ]
 	}
 ]
