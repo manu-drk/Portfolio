@@ -14,19 +14,19 @@
     {
 		"id": "22",
 		"title": "Projets OpenClassRoom",        
-        "cover": "./images/projet_ocr.jpg",
+        "cover": "./images/projet_ocr1.jpg",
         "link": "./page3_OpenClassRoom.html"           
     },
     {
 		"id": "23",
 		"title": "Projets professionnels",        
-        "cover": "./images/projets_pro.jpg",
+        "cover": "./images/projets_pro1.jpg",
         "link": "./page4_Professionnels.html"	             
     },
     {
 		"id": "24",
 		"title": "Me contacter",        
-        "cover": "./images/Me_contacter.jpg",
+        "cover": "./images/Me_contacter1.jpg",
         "link": "./page5_Contact.html"	            
     }
 ]

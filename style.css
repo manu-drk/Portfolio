@@ -224,7 +224,7 @@ main.main-container {
     width: 600px;
     height: 400px;
     margin: 0 10px;
-    border-radius: 20px;
+    border-radius: 22px;
     border: 2px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
@@ -383,7 +383,7 @@ h2 {
     display: flex;
     justify-content: flex-start;
     color: black;
-    margin: 15px 0;
+    margin: 15px;
     
 }
 
