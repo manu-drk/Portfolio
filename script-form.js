@@ -1,67 +1,79 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
-    fetch('datas/form.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Form data loaded:', data);
+    function loadFormCarousel() {
+        fetch('datas/form.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(formData => {
+                console.log('Form data loaded:', formData);
 
-            const formContainer = document.querySelector('.carousel-form');
+                const carouselContainer = document.querySelector('.carousel-form');
+                const titleContainer = document.createElement('div');
+                titleContainer.setAttribute('class', 'carousel-title');
 
-            // Créer et ajouter le conteneur de titre avant le conteneur du formulaire
-            const titleContainer = document.createElement('div');
-            titleContainer.setAttribute('class', 'carousel-title');
-            const titleElement = document.createElement('h1');
-            titleElement.textContent = data.form.title;
-            titleContainer.appendChild(titleElement);
-            formContainer.before(titleContainer);
+                const titleElement = document.createElement('h1');
+                titleElement.textContent = formData.form.title;
+                titleContainer.appendChild(titleElement);
+                carouselContainer.before(titleContainer);
 
-            // Créer l'élément du formulaire
-            const formElement = document.createElement('form');
+                function createCarouselItem() {
+                    carouselContainer.innerHTML = ''; // Clear existing items
 
-            // Parcourir et ajouter les champs au formulaire
-            data.form.fields.forEach(field => {
-                const formField = document.createElement('div');
-                formField.classList.add('form-field');
+                    const carouselItem = document.createElement('div');
+                    carouselItem.setAttribute('class', 'carousel-item-form');
 
-                const label = document.createElement('label');
-                label.textContent = field.label;
-                label.setAttribute('for', field.name);
-                formField.appendChild(label);
+                    // Create form element
+                    const formElement = document.createElement('form');
 
-                let input;
-                if (field.type === 'textarea') {
-                    input = document.createElement('textarea');
-                } else {
-                    input = document.createElement('input');
-                    input.setAttribute('type', field.type);
+                    formData.form.fields.forEach(field => {
+                        const formField = document.createElement('div');
+                        formField.classList.add('form-field');
+
+                        const label = document.createElement('label');
+                        label.textContent = field.label;
+                        label.setAttribute('for', field.name);
+                        formField.appendChild(label);
+
+                        let input;
+                        if (field.type === 'textarea') {
+                            input = document.createElement('textarea');
+                        } else {
+                            input = document.createElement('input');
+                            input.setAttribute('type', field.type);
+                        }
+
+                        input.setAttribute('name', field.name);
+                        input.setAttribute('placeholder', field.placeholder);
+                        formField.appendChild(input);
+
+                        formElement.appendChild(formField);
+                    });
+
+                    // Add submit button
+                    const submitButton = document.createElement('button');
+                    submitButton.setAttribute('type', 'submit');
+                    submitButton.textContent = 'Envoyer';
+                    formElement.appendChild(submitButton);
+
+                    carouselItem.appendChild(formElement);
+                    carouselContainer.appendChild(carouselItem);
                 }
 
-                input.setAttribute('name', field.name);
-                input.setAttribute('placeholder', field.placeholder);
-                formField.appendChild(input);
-
-                formElement.appendChild(formField);
+                createCarouselItem();
+            })
+            .catch(error => {
+                console.error('Error fetching form data:', error);
             });
+    }
 
-            // Ajouter le bouton de soumission
-            const submitButton = document.createElement('button');
-            submitButton.setAttribute('type', 'submit');
-            submitButton.textContent = 'Envoyer';
-            formElement.appendChild(submitButton);
-
-            formContainer.appendChild(formElement);
-        })
-        .catch(error => console.error('Error loading JSON:', error));
+    loadFormCarousel();
 });
 
-
-/*********************************************** */
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('DOM fully loaded and parsed');
@@ -77,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //             console.log('Form data loaded:', data);
 
 //             const formContainer = document.querySelector('.carousel-form');
+
+//             if (!formContainer) {
+//                 console.error('Form container not found');
+//                 return;
+//             }
 
 //             // Créer et ajouter le conteneur de titre avant le conteneur du formulaire
 //             const titleContainer = document.createElement('div');
@@ -84,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //             const titleElement = document.createElement('h1');
 //             titleElement.textContent = data.form.title;
 //             titleContainer.appendChild(titleElement);
-//             formContainer.before(titleContainer);
+//             formContainer.parentNode.insertBefore(titleContainer, formContainer);
 
 //             // Créer l'élément du formulaire
 //             const formElement = document.createElement('form');
@@ -125,66 +142,3 @@ document.addEventListener('DOMContentLoaded', () => {
 //         .catch(error => console.error('Error loading JSON:', error));
 // });
 
-/*************************************** */
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('DOM fully loaded and parsed');
-
-//     fetch('datas/form.json')
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Network response was not ok ' + response.statusText);
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             console.log('Form data loaded:', data);
-
-//             const formContainer = document.querySelector('.carousel-form');
-
-//             // Créer et ajouter le conteneur de titre avant le conteneur du formulaire
-//             const titleContainer = document.createElement('div');
-//             titleContainer.setAttribute('class', 'form-title');
-//             const titleElement = document.createElement('h1');
-//             titleElement.textContent = data.form.title;
-//             titleContainer.appendChild(titleElement);
-//             formContainer.before(titleContainer);
-
-//             // Créer l'élément du formulaire
-//             const formElement = document.createElement('form');
-
-//             // Parcourir et ajouter les champs au formulaire
-//             data.form.fields.forEach(field => {
-//                 const formField = document.createElement('div');
-//                 formField.classList.add('form-field');
-
-//                 const label = document.createElement('label');
-//                 label.textContent = field.label;
-//                 label.setAttribute('for', field.name);
-//                 formField.appendChild(label);
-
-//                 let input;
-//                 if (field.type === 'textarea') {
-//                     input = document.createElement('textarea');
-//                 } else {
-//                     input = document.createElement('input');
-//                     input.setAttribute('type', field.type);
-//                 }
-
-//                 input.setAttribute('name', field.name);
-//                 input.setAttribute('placeholder', field.placeholder);
-//                 formField.appendChild(input);
-
-//                 formElement.appendChild(formField);
-//             });
-
-//             // Ajouter le bouton de soumission
-//             const submitButton = document.createElement('button');
-//             submitButton.setAttribute('type', 'submit');
-//             submitButton.textContent = 'Envoyer';
-//             formElement.appendChild(submitButton);
-
-//             formContainer.appendChild(formElement);
-//         })
-//         .catch(error => console.error('Error loading JSON:', error));
-// });

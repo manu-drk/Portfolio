@@ -1,0 +1,326 @@
+@import url('variables.css');
+
+@keyframes animate {
+    to {
+        box-shadow: 0 0 35px var(--carousel-shadow), 0 0 35px var(--carousel-shadow), 0 0 35px var(--carousel-shadow);
+    }
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+a,
+button,
+span,
+div {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* SCROLL BAR ----------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 80%;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-background);
+    border-radius: 15px;
+    height: 300px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-background);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-background);
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
+    z-index: 99;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: var(--link-color);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 1px var(--link-hover-shadow);
+}
+
+nav ul li.center {
+    flex: 2;
+    font-size: 1.5em;
+}
+
+h1 {
+    margin: 0;
+}
+
+main.main-container {
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 48px;
+}
+
+/* ********************* carousels  ********************* */
+.carousel-container,
+.carousel-container-ocr,
+.carousel-container-pro,
+.carousel-container-presentation,
+.carousel-container-cv,
+.carousel-container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.carousel,
+.carousel-ocr,
+.carousel-pro,
+.carousel-cv,
+.carousel-presentation,
+.carousel-container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    width: 100%;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item,
+.carousel-ocr .carousel-item-ocr,
+.carousel-pro .carousel-item-pro,
+.carousel-cv .carousel-item-cv,
+.carousel-presentation .carousel-item-presentation {
+    width: 600px;
+    height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid var(--carousel-border);
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
+    animation: var(--carousel-animation);
+    transition: transform 0.5s, opacity 0.5s;
+    position: absolute;
+    transform: scale(0.6);
+    opacity: 0.6;
+    background-color: white;
+}
+
+.carousel-item img,
+.carousel-ocr .carousel-item-ocr img,
+.carousel-pro .carousel-item-pro img,
+.carousel-cv .carousel-item-cv img {
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    border: 7px solid white;
+}
+
+.carousel-item:nth-child(1) {
+    transform: translateX(-300px) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item:nth-child(2) {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel-item:nth-child(3) {
+    transform: translateX(300px) scale(0.8);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.carousel-item:nth-child(4) {
+    transform: translateX(600px) scale(0.6);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.carousel-item:nth-child(5) {
+    transform: translateX(-600px) scale(0.4);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.carousel-item-pointer {
+    cursor: pointer;
+}
+
+.carousel-cv h2,
+.carousel-presentation h2 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-cv ul,
+.carousel-presentation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 550px;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+.carousel-cv li,
+.carousel-presentation li {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin: 15px 0;
+}
+
+.details-container {
+    margin-top: 0px;
+}
+
+/* ********************* carousels contenair  ********************* */
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.links-container a {
+    margin: 0 10px;
+    font-size: 27px;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--tag-background-color);
+    border-radius: 25px;
+    border: 2px solid var(--tag-border-color);
+    padding: 7px 15px;
+}
+
+.links-container a:hover {
+    transform: scale(1);
+    text-shadow: 0 0 1px var(--link-hover-shadow);
+    background-color: var(--tag-background-color-hover);
+    cursor: pointer;
+    border: 2px solid var(--tag-border-color-hover);
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--tag-background-color);
+    color: var(--tag-text-color);
+    padding: 7px 15px;
+    margin: 0 5px;
+    border-radius: 15px;
+    font-size: 16px;
+    border: 2px solid var(--tag-border-color);
+}
+
+.tag:hover {
+    background-color: var(--tag-background-color-hover);  
+    border: 2px solid var(--tag-border-color-hover);
+}
+
+button {
+    background-color: var(--tag-background-color);
+    margin: 0 10px;
+    font-size: 27px;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid var(--tag-border-color);
+    padding: 7px 15px;
+}
+
+button:hover {
+    transform: scale(1);
+    text-shadow: 0 0 1px var(--link-hover-shadow);
+    background-color: var(--tag-background-color-hover);
+    cursor: pointer;
+    border: 2px solid var(--tag-border-color-hover);
+}
+
+button.active {
+    background-color: var(--toggle-background); 
+    color: white;
+    border: 1px solid var(--tag-border-color);
+}

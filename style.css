@@ -208,21 +208,7 @@ main.main-container {
     /* margin-bottom: 48px;  */
 }
 
-.carousel-container-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    /* overflow: hidden;  */
-    position: relative;
-    padding: 20px; 
-    box-sizing: border-box;
-    flex-direction: column;
-    margin-top: 50px;  
-    margin-bottom: 15px; 
-}
+
 .carousel {
     display: flex;
     align-items: center;
@@ -232,15 +218,7 @@ main.main-container {
     height: 480px;
     position: relative;
 }
-/* .carousel-ocr {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 480px;
-} */
+
 
 .carousel-item {
     width: 600px;
@@ -306,11 +284,7 @@ main.main-container {
     border: 1px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;
-    /* overflow: scroll;     */
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
-    /* cursor: pointer; */
+    transition: transform 0.5s, opacity 0.5s;    
     position: absolute;
     transform: scale(0.6);
     opacity: 0.6;
@@ -331,15 +305,6 @@ main.main-container {
     overflow: auto;
 }
 
-/* .carousel-item-cv {
-    transform: translateX(0px) scale(1);
-    opacity: 1;
-    z-index: 3;
-    background-image: url(./images/light_mode_fond.jpg);
-    background-size: cover;
-    
-} */
-
 .carousel-ocr {
     display: flex;
     overflow: hidden;
@@ -351,14 +316,9 @@ main.main-container {
 }
 
 
-/* .carousel-item-ocr img {
-    width: 600px;
-    height: 400px;
-    border-radius: 20px;
-} */
 .carousel-item-ocr img {
-    width: 587px;
-    height: 395px;
+    width: 586px;
+    height: 386px;
     border-radius: 20px;
     border: 7px solid white;
 }
@@ -375,8 +335,8 @@ main.main-container {
 
 
 .carousel-item-pro img {
-    width: 600px;
-    height: 400px;
+    width: 586px;
+    height: 386px;
     border-radius: 20px;
     border: 7px solid white;
 }
@@ -391,27 +351,6 @@ main.main-container {
     height: 480px;
 }
 
-/* .carousel-item-cv img {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 150%;
-    object-fit: cover; 
-    z-index: 0; 
-    overflow: hidden;
-} */
-
-/* .carousel-item-cv img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    opacity: 0.7;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    object-fit: cover;
-} */
 
 .carousel-item-cv h2,
 .carousel-item-cv li {
@@ -419,15 +358,17 @@ main.main-container {
     z-index: 1;
    
 }
-
-.carousel-cv h2,
+h2 {
+    display: none;
+}
+/* .carousel-cv h2,
 .carousel-presentation h2 {
     display: flex;
     justify-content: center;
     color: black;
     position: relative;
     z-index: 1;
-}
+} */
 .carousel-cv ul,
 .carousel-presentation ul {
     display: flex;
@@ -558,22 +499,7 @@ button.active {
     background-color: rgba(0, 0, 0, 0.7); */
 }
 
-/* .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 558px;
-    height: 365px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; 
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
+
 
 .modal-content {
     background-color: #fefefe;
@@ -609,12 +535,7 @@ button.active {
     color: black;
 }
 
-/* .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-} */
+
 .close {
     position: absolute; 
     top: 10px; 
@@ -643,7 +564,7 @@ button.active {
     transition: filter 0.5s;
 }
 /* ********************* Form ********************* */
-.carousel-form {
+/* .carousel-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -655,15 +576,72 @@ button.active {
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
     transition: transform 0.5s, opacity 0.5s;
-    /* overflow: scroll;     */
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
-    /* cursor: pointer; */
-    position: absolute;
-    /* transform: scale(0.6); */
+    
+    position: relative;
+    
     opacity: 1;
     background-color: white;
+} */
+
+.carousel-container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    /* overflow: hidden;  */
+    position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: 50px;  
+    margin-bottom: 15px; 
 }
+.carousel-form .carousel-item-form {
+    width: 600px;
+    height: 400px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid var(--carousel-border);
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
+    animation: var(--carousel-animation);
+    transition: transform 0.5s, opacity 0.5s;    
+    position: absolute;
+    
+    background-color: white;
+}
+
+.carousel-form {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 480px;
+}
+/* .carousel-form {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 480px;
+    border-radius: 20px;
+    border: 1px solid var(--carousel-border);
+    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
+    animation: var(--carousel-animation);
+    transition: transform 0.5s, opacity 0.5s;    
+    /* position: absolute; */
+    /*
+    transform: scale(0.6);
+    opacity: 1;
+    background-color: white;
+} */
+
+
 .form-title {
     text-align: center;
     margin-bottom: 20px;
@@ -676,26 +654,48 @@ button.active {
 }
 
 /* Styles pour les champs du formulaire */
+
+/* .form-field {
+    margin: 15px 15px;
+} */
+
 .form-field {
-    margin-bottom: 15px;
+    margin: 10px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-field label {
+/* .form-field {
+    margin: 10px auto;
+} */
+
+/* .form-field label {
     display: block;
     font-size: 16px;
     color: black;
     margin-bottom: 5px;
-}
+} */
 
+.form-field label {
+    width: 100%;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;  /* Align text to the left */
+}
 .form-field input,
 .form-field textarea {
-    width: 100%;
+    
+    width: 90%;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--carousel-border);
     box-sizing: border-box;
     font-size: 16px;
     color: var(--text-color);
+
 }
 
 .form-field textarea {
@@ -704,8 +704,11 @@ button.active {
 }
 
 /* Style pour le bouton de soumission */
+
 .carousel-form button {
-    width: 100%;
+    display: block; /* Assurez-vous que le bouton est un élément bloc */
+    margin: 20px auto; /* Centrez le bouton horizontalement */
+    width: auto; /* Ajustez la largeur automatiquement */
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--tag-border-color);
@@ -715,6 +718,20 @@ button.active {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
+/* .carousel-form button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--tag-border-color);
+    background-color: var(--tag-background-color);
+    color: var(--link-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+} */
 
 .carousel-form button:hover {
     background-color: var(--tag-background-color-hover);

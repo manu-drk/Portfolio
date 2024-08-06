@@ -57,33 +57,6 @@
     }
 
 
-    /************************** teste cv ***********/
-
-    /* .carousel-item {
- display: none;
-}
-.carousel-item.active {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    z-index: 3;
-}
-.carousel-item:nth-child(n+2) {
-    display: none;
-}
-
-.carousel .prev, .carousel .next {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(0);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 2;
-} */
-
     /**********          Carousel Cv          **********/
 
     .carousel-container-cv {
@@ -94,9 +67,7 @@
         display: none;
     }
 
-    /* .carousel-item-cv.initial {
-    display: block;
-} */
+
     .carousel-item-cv.active {
         display: block;
         transform: translateX(0) scale(1);
@@ -179,8 +150,7 @@
     }
 
     .carousel-item-ocr.next {
-        display: block;
-        /* Afficher l'élément suivant */
+        display: block;       
         transform: translateX(0) scale(0.8);
         opacity: 0.8;
         z-index: 2;
@@ -191,9 +161,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        margin-top: 10px;
-        /* align-content: center; */
-        /* align-items: center; */
+        margin-top: 10px;        
         width: 320px;
     }
 
@@ -206,12 +174,9 @@
         flex-direction: row;
         justify-content: center;
         gap: 7px;
-        margin-top: 35px;
-        /* align-content: center; */
-        /* align-items: center; */
+        margin-top: 35px;        
         width: 320px;
     }
-
 
     .tag {
         text-align: center;
@@ -229,51 +194,28 @@
         width: 100%;
         height: auto;
     }
-    /* .carousel-item-pro {
-        display: none;
+   
+
+
+    /**********          Carousel Cv          **********/
+
+    .carousel-container-form {
+        margin-bottom: 580px;
     }
-
-    .carousel-item-pro.initial {
-        display: block;
-    }
-
-    .carousel-item-pro.active {
-        display: block;
-        transform: translateX(0) scale(1);
-        opacity: 1;
-        z-index: 3;
-    }
-
-    .carousel-item-pro.previous {
-        display: block;
-        transform: translateX(0) scale(0.8);
-        opacity: 0.8;
-        z-index: 2;
-    }
-
-    .carousel-item-pro.next {
-        display: block;
-        
-        transform: translateX(0) scale(0.8);
-        opacity: 0.8;
-        z-index: 2;
-    } */
-
+    
+    
+    
     /**********          bouton previous et next          **********/
 
-
-
-    .prev_bouton,
+        .prev_bouton,
     .next_bouton {
-        position: absolute;
-        /* top: 50%; */
+        position: absolute;        
         transform: translateY(0);
-        background: var(--scrollbar-thumb-background);
-        /* background: none; */
+        background: var(--scrollbar-thumb-background);        
         border: none;
         cursor: pointer;
         z-index: 4;
-        /* Assurez-vous que les boutons sont au-dessus des éléments du carrousel */
+        
     }
 
     .prev_bouton:hover,
@@ -297,9 +239,6 @@
         height: auto;
     }
 
-    /* .carousel-item:nth-child(n+2) {
-        display: none;
-    } */
 
     .details-container {
         width: 80%;
@@ -309,7 +248,6 @@
         max-height: 580px;
         min-height: 580px;
     }
-
 
 
 }
@@ -355,48 +293,5 @@
         overflow: hidden;
     }
 
-    /* .carousel-item {
-        width: 90%;
-     height: 400px; 
-        transform: translateX(-50%) scale(0.6);
-        opacity: 0.6;
-        position: absolute;
-         top: 50%; 
-        left: 50%;
-        z-index: 1;
-    } */
-
-
-
-    /* .carousel-item {
-        width: 90%;    
-        transform: translateX(-50%) scale(0.6);
-        opacity: 0.6;
-        position: absolute;        
-        left: 50%;
-        z-index: 1;
-    }
-    .carousel-item.active {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-        z-index: 2;
-    }
-    .carousel-item:nth-child(n+2) {
-        display: none;
-    }
-
-    .carousel .prev, .carousel .next {
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 2;
-    } */
-
-
+    
 }
