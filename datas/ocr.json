@@ -29,6 +29,10 @@
             "Au cours de ce projet, j'ai acquis des compétences en optimisation globale des sites, couvrant à la fois les performances et le SEO.",
             "J'ai appris à mettre en place le référencement local en utilisant Schema.org, et à développer des compétences dans l'ajout de metas pour les réseaux sociaux.",
             "De plus, j'ai amélioré mes compétences en accessibilité web et produit des rapports d’optimisation détaillant toutes les actions entreprises et leur impact."
+        ],
+        "problematique":[
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
+
         ]
 	},
     {
@@ -55,6 +59,9 @@
         "J'ai maîtrisé la création de composants React et la gestion des routes avec React Router, tout en respectant les maquettes Figma pour garantir un design responsive et de qualité.",
         "En travaillant sans back-end fonctionnel, j'ai utilisé un fichier JSON pour construire le front-end.",
         "J'ai également suivi les coding guidelines de Kasa et utilisé Create React App pour structurer l'application. J'ai mis en œuvre des fonctionnalités spécifiques telles que la navigation circulaire dans la galerie de photos, la gestion des Collapses avec des comportements interactifs selon les clics des utilisateurs, et assuré que l'interface reste conforme aux contraintes fonctionnelles et techniques établies."
+        ],
+        "problematique":[
+
         ]
 	},
     {
@@ -82,6 +89,9 @@
 		"competences": ["Dans le cadre de mon travail comme développeur front-end pour l’agence ArchiWebos, j'ai développé plusieurs compétences essentielles.",
         "J'ai conçu la page de présentation des travaux de l'architecte à partir du HTML fourni, ainsi que la page de connexion de l'administrateur du site, que j'ai codée depuis zéro. J'ai également créé une modale permettant d'uploader de nouveaux travaux.",
         "En plus de ces tâches, j'ai acquis des compétences en récupération des données utilisateurs via des formulaires en JavaScript, en manipulation des éléments du DOM, et en gestion des événements utilisateurs avec JavaScript."
+        ],
+        "problematique":[
+
         ]
     },
     {
@@ -104,6 +114,9 @@
             "Dans ce projet, j'ai acquis des compétences en intégration de contenu selon une maquette avec HTML et CSS.",
             "J'ai également appris à créer des interfaces responsives, assurant une bonne adaptation du site sur différents appareils.",
             "Cette expérience m'a permis de développer une meilleure compréhension des besoins d'une start-up et d'améliorer la qualité visuelle et fonctionnelle des sites web."
+        ],
+        "problematique":[
+
         ]
 	},
     {
@@ -129,6 +142,9 @@
         ],
 		"competences":["Dans le cadre du développement du site Mon Vieux Grimoire, j'ai acquis plusieurs compétences clés en back-end. J'ai travaillé avec Node.js pour développer les fonctionnalités du site, tout en mettant en place un modèle logique de données conforme à la réglementation.",
         "J'ai assuré la mise en œuvre sécurisée des opérations CRUD pour gérer les livres et les notes, ainsi que le stockage sécurisé des données, y compris le hashage des mots de passe. J'ai utilisé MongoDB comme base de données pour stocker les informations, et implémenté une authentification sécurisée avec des tokens JWT pour garantir la sécurité des connexions des membres."
+        ],
+        "problematique":[
+
         ]
 	}
 ]
