@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 item.style.opacity = '1';
                                 item.style.zIndex = 3;
                                 item.classList.add('active');
-                                item.onclick = () => goTo(item.getAttribute('data-link'));
+                                item.onclick = null;
                                 titleElement.innerText = item.getAttribute('data-title');
                                 break;
                             case 2:
