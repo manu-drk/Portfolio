@@ -31,8 +31,9 @@
             "De plus, j'ai amélioré mes compétences en accessibilité web et produit des rapports d’optimisation détaillant toutes les actions entreprises et leur impact."
         ],
         "problematique":[
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
-
+            "Optimisation des Images:",
+            "S'assurer que les dimensions des images, notamment les photos de couverture, sont appropriées pour le site afin de réduire le temps de chargement.",
+            "Cela implique également de minimiser le code et de supprimer le code inutile pour améliorer les performances du site."
         ]
 	},
     {
@@ -61,7 +62,12 @@
         "J'ai également suivi les coding guidelines de Kasa et utilisé Create React App pour structurer l'application. J'ai mis en œuvre des fonctionnalités spécifiques telles que la navigation circulaire dans la galerie de photos, la gestion des Collapses avec des comportements interactifs selon les clics des utilisateurs, et assuré que l'interface reste conforme aux contraintes fonctionnelles et techniques établies."
         ],
         "problematique":[
-
+            
+            "Gestion de la Responsivité:",
+            "Ajustement et mise en page des composants pour qu'ils restent alignés et centrés conformément à la maquette Figma.",            
+            "Gestion des Collapses:",
+            "Assurer une animation de transition fluide pour l'ouverture et la fermeture des collapses, conformément à la maquette Figma."
+            
         ]
 	},
     {
@@ -90,7 +96,10 @@
         "J'ai conçu la page de présentation des travaux de l'architecte à partir du HTML fourni, ainsi que la page de connexion de l'administrateur du site, que j'ai codée depuis zéro. J'ai également créé une modale permettant d'uploader de nouveaux travaux.",
         "En plus de ces tâches, j'ai acquis des compétences en récupération des données utilisateurs via des formulaires en JavaScript, en manipulation des éléments du DOM, et en gestion des événements utilisateurs avec JavaScript."
         ],
-        "problematique":[
+        "problematique":["Gestion Dynamique des Données:", 
+        "Assurer la récupération et la gestion efficace des données des catégories et des projets depuis l'API tout en évitant les duplications et en maintenant une bonne performance de l'application.",
+        "Gestion de l'Ouverture de la Modale:",
+        "Assurer une ouverture fluide et réactive de la modale pour l'upload de nouveaux médias, tout en garantissant une expérience utilisateur optimale."
 
         ]
     },
@@ -116,7 +125,9 @@
             "Cette expérience m'a permis de développer une meilleure compréhension des besoins d'une start-up et d'améliorer la qualité visuelle et fonctionnelle des sites web."
         ],
         "problematique":[
-
+            "Attention aux Détails de la Maquette:",
+            "Veiller à ce que tous les détails de la maquette Figma soient correctement intégrés et adaptés pour les versions desktop, mobile et tablette du site, en respectant les spécifications de design pour chaque type d'appareil.",
+            "Cela inclut la gestion des espacements, des tailles de police, des images et des éléments interactifs afin d'assurer une cohérence visuelle et une expérience utilisateur optimale à travers toutes les plateformes."
         ]
 	},
     {

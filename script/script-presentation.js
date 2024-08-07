@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 
-    function loadCarousel() {
-        fetch('datas/index.json')
+    function loadPresentationCarousel() {
+        fetch('datas/presentation.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(carouselData => {
-                console.log(' data loaded:', carouselData);
+                console.log('Presentation data loaded:', carouselData);
 
-                const carouselContainer = document.querySelector('.carousel');
+                const carouselContainer = document.querySelector('.carousel-presentation');
                 const titleContainer = document.createElement('div');
                 titleContainer.setAttribute('class', 'carousel-title');
 
@@ -20,37 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 titleContainer.appendChild(titleElement);
                 carouselContainer.before(titleContainer);
 
-                let currentIndex = 0;
+                let currentIndexPresentation = 0;
                 let prevButton = null;
                 let nextButton = null;
 
                 function createCarouselItems() {
-                    carouselContainer.innerHTML = ''; // Clear existing items
+                    carouselContainer.innerHTML = ''; 
 
                     carouselData.forEach((item, index) => {
                         const carouselItem = document.createElement('div');
-                carouselItem.setAttribute('class', 'carousel-item');
-                carouselItem.setAttribute('data-index', index);
-                carouselItem.setAttribute('data-link', item.link);
-                carouselItem.setAttribute('data-title', item.title);
+                        carouselItem.setAttribute('class', 'carousel-item-presentation');
+                        carouselItem.setAttribute('data-index', index);
+                        carouselItem.setAttribute('data-link', item.link);
+                        carouselItem.setAttribute('data-title', item.title);
 
                         // Add title
-                        // const title = document.createElement('h2');
-                        // title.innerText = item.title;
-                        // carouselItem.appendChild(title);
+                        const title = document.createElement('h2');
+                        title.innerText = item.title;
+                        carouselItem.appendChild(title);
 
                         // Add description
-                        // Add cover image
-                const img = document.createElement('img');
-                img.src = item.cover;
-                carouselItem.appendChild(img);
+                        const descriptionList = document.createElement('ul');
+                        item.description.forEach(desc => {
+                            const descriptionItem = document.createElement('li');
+                            descriptionItem.innerText = desc;
+                            descriptionList.appendChild(descriptionItem);
+                        });
+                        carouselItem.appendChild(descriptionList);
 
-                carouselContainer.appendChild(carouselItem);
+                        carouselContainer.appendChild(carouselItem);
                     });
                 }
 
-                function showCarouselItem(index) {
-                    const items = document.querySelectorAll('.carousel-item');
+                function showPresentationCarouselItem(index) {
+                    const items = document.querySelectorAll('.carousel-item-presentation');
                     const totalItems = items.length;
                     const titleElement = document.querySelector('.carousel-title h1');
 
@@ -73,14 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 item.style.opacity = '0.8';
                                 item.style.zIndex = 2;
                                 item.classList.add('inactive');
-                                item.onclick = () => moveCarousel(-1);
+                                item.onclick = () => movePresentationCarousel(-1);
                                 break;
                             case 1:
                                 item.style.transform = 'translateX(0px) scale(1)';
                                 item.style.opacity = '1';
                                 item.style.zIndex = 3;
                                 item.classList.add('active');
-                                item.onclick = () => goTo(item.getAttribute('data-link'));
+                                item.onclick = null;
                                 titleElement.innerText = item.getAttribute('data-title');
                                 break;
                             case 2:
@@ -88,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 item.style.opacity = '0.8';
                                 item.style.zIndex = 2;
                                 item.classList.add('inactive');
-                                item.onclick = () => moveCarousel(1);
+                                item.onclick = () => movePresentationCarousel(1);
                                 break;
                             default:
                                 item.style.transform = 'translateX(0px) scale(0.4)';
@@ -99,17 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
 
-                    currentIndex = index;
+                    currentIndexPresentation = index;
                 }
 
-                function moveCarousel(direction) {
-                    const items = document.querySelectorAll('.carousel-item');
-                    currentIndex = (currentIndex + direction + items.length) % items.length;
-                    showCarouselItem(currentIndex);
+                function movePresentationCarousel(direction) {
+                    const items = document.querySelectorAll('.carousel-item-presentation');
+                    currentIndexPresentation = (currentIndexPresentation + direction + items.length) % items.length;
+                    showPresentationCarouselItem(currentIndexPresentation);
                 }
 
                 function createArrowButtons() {
-                    const carousel = document.querySelector('.carousel');
+                    const carousel = document.querySelector('.carousel-presentation');
                     if (!carousel) return;
 
                     if (prevButton) prevButton.remove();
@@ -125,17 +128,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     nextButton.innerHTML = '<img src="./images/flech-next.png" alt="Next">';
                     carousel.appendChild(nextButton);
 
-                    prevButton.addEventListener('click', () => moveCarousel(-1));
-                    nextButton.addEventListener('click', () => moveCarousel(1));
+                    prevButton.addEventListener('click', () => movePresentationCarousel(-1));
+                    nextButton.addEventListener('click', () => movePresentationCarousel(1));
                 }
 
                 function manageCarouselVisibility() {
                     createArrowButtons();
-                    showCarouselItem(currentIndex);
+                    showPresentationCarouselItem(currentIndexPresentation);
                 }
 
                 createCarouselItems();
-                showCarouselItem(0);
+                showPresentationCarouselItem(0);
 
                 manageCarouselVisibility();
 
@@ -153,13 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Garder l'onglet actif
                 window.addEventListener('focus', () => {
-                    showCarouselItem(currentIndex); // Assurer que l'affichage du carrousel est mis à jour
+                    showPresentationCarouselItem(currentIndexPresentation); 
                 });
             })
             .catch(error => {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching presentation data:', error);
             });
     }
 
-    loadCarousel();
+    loadPresentationCarousel();
 });
+

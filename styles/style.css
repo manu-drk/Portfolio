@@ -366,6 +366,13 @@ h2 {
     display: none;
 }
 
+/* h2 {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin: 15px;
+} */
+
 .carousel-cv ul,
 .carousel-presentation ul {
     display: flex;
@@ -523,7 +530,7 @@ button.active {
 .modal-problematique {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     color: black;
 }
