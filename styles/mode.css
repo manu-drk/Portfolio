@@ -7,10 +7,12 @@ body {
 
 #mode-toggle-container {
     position: fixed;
-    top: 13px;
+    top: 6px;
+    /* top: 13px; */
     right: 110px;
     width: 30px;
-    height: 15px;
+    /* height: 15px; */
+    height: 16px;
     background-color: var(--toggle-background); 
     border-radius: 30px;
     display: flex;
@@ -21,8 +23,10 @@ body {
 }
 
 #mode-toggle {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    /* width: 20px; */
+    /* height: 20px; */
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s;
@@ -43,8 +47,10 @@ body.dark-mode #mode-toggle {
 #mode-toggle::before {
     content: var(--toggle-icon);
     position: absolute;
-    width: 21px;
-    height: 23px;
+    /* width: 21px;
+    height: 23px; */
+    width: 27px;
+    height: 29px;
     border-radius: 50%;
 }
 

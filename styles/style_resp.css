@@ -25,7 +25,8 @@
 
 
     .carousel-container {
-        margin-bottom: 580px
+        /* margin-bottom: 580px */
+        margin-bottom: 368px
     }
 
 
@@ -59,7 +60,8 @@
     /**********          Carousel Cv          **********/
 
     .carousel-container-cv {
-        margin-bottom: 580px;
+        /* margin-bottom: 580px */
+        margin-bottom: 368px
     }
 
     .carousel-item-cv {
@@ -91,7 +93,8 @@
     /**********          Carousel Présentation          **********/
 
     .carousel-container-presentation {
-        margin-bottom: 580px;
+        /* margin-bottom: 580px */
+        margin-bottom: 368px
     }
 
     .carousel-item-presentation {
@@ -195,10 +198,11 @@
 
 
 
-    /**********          Carousel Cv          **********/
+    /**********          Carousel formulaire          **********/
 
     .carousel-container-form {
-        margin-bottom: 580px;
+        /* margin-bottom: 580px; */
+        margin-bottom: 450px;
     }
 
 
@@ -243,8 +247,10 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        max-height: 580px;
-        min-height: 580px;
+        /* max-height: 580px;
+        min-height: 580px; */
+        max-height: 450px;
+        min-height: 450px;
     }
 
 
