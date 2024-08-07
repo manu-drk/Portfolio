@@ -30,11 +30,11 @@
 		"id": "73",        
 		"title": "Diplômes obtenus",        
         "description": [
-            "2023 - BTS MCO\nManagement commercial opérationnel\n(obtenu)\n\n",
-            "2021 - Titre Professionnel\nConducteur du transport routier de marchandises\n(obtenu)\n\n",
-            "2007 - BTS MUC\nManagement des Unités Commerciales\n(niveau)\n\n",
-            "2005 - BAC PRO MRIM\nMicro-informatique Réseau Installation Maintenance\n(obtenu)\n\n",
-            "2003 - CAP AMMB\nAgent de Maintenance de Matériel Bureautique\n(obtenu)\n\n"
+            "2023 - BTS MCO\nManagement commercial opérationnel\n(obtenu)\n",
+            "2021 - Titre Professionnel\nConducteur du transport routier de marchandises\n(obtenu)\n",
+            "2007 - BTS MUC\nManagement des Unités Commerciales\n(niveau)\n",
+            "2005 - BAC PRO MRIM\nMicro-informatique Réseau Installation Maintenance\n(obtenu)\n",
+            "2003 - CAP AMMB\nAgent de Maintenance de Matériel Bureautique\n(obtenu)\n"
         ]
 	},
     {
@@ -51,20 +51,15 @@
     {
 		"id": "75",
 		"title": "Compétences",        
-        "description": ["Bash\n",
-        "Bcrypt\n",        
-        "CSS\n",
-        "Express\n",
-        "Express Mongo\n",
-        "Helmet\n",
-        "HTML\n",
-        "JavaScript\n",
-        "MongoDB\n",
-        "NodeJS\n",
-        "React Routeur\n",
-        "ReactJS\n",
-        "Sass\n",
-        "SEO\n"
-        ]
+        "description": [
+            "Langages de programmation:",
+            "JavaScript, CSS, HTML, Sass",
+            "Frameworks et bibliothèques:\n",
+            "Express, Express Mongo, ReactJS, React Routeur, NodeJS, Helmet, Bcrypt",
+            "Base de données:\n",
+            "MongoDB",
+            "Utilitaires et pratiques:\n",
+            "Bash, SEO"
+          ]
     }
 ]

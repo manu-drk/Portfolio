@@ -22,12 +22,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* height: 100%; */
-    /* background: var(--background-color); */
-    /* background-image: var(--background-image);
-    background-size: cover;
-    
-    background-position: center; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,27 +47,34 @@ body::before {
 }
 
 
-/* SCROLL BAR ----------------- */
+/********************** SCROLL BAR ************************* */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 80%;
+    height: 250px;
+    max-height: 250px;
 
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background: var(--scrollbar-track-background);
     border-radius: 15px;
-    height: 300px;
-}
+    height: 200px;
+} */
 
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb-background);
     border-radius: 15px;
+    height: 60%;
+    
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-thumb-hover-background);
 }
+
+
+/**************************************************************/
+
 
 nav {
     width: 100%;
@@ -123,9 +124,10 @@ h1 {
 
 main.main-container {
     width: 100%;
-    margin-top: 60px; /* Assure un espace suffisant sous la barre de navigation */
-    padding-bottom: 48px; /* Assure que le contenu ne se cache pas sous le pied de page */
+    margin-top: 60px;
+    padding-bottom: 48px;
 }
+
 /* ********************* carousels  ********************* */
 
 .carousel-container {
@@ -133,15 +135,15 @@ main.main-container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px;  
-    margin-bottom: 15px; 
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 .carousel-container-ocr {
@@ -149,30 +151,31 @@ main.main-container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px; 
-    margin-bottom: 15px;  
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
+
 .carousel-container-pro {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px; 
-    margin-bottom: 15px; 
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 .carousel-container-presentation {
@@ -180,15 +183,15 @@ main.main-container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px;  
-    margin-bottom: 15px; 
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 .carousel-container-cv {
@@ -196,15 +199,15 @@ main.main-container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px; 
-    margin-bottom: 15px; 
+    margin-top: 50px;
+    margin-bottom: 15px;
     /* margin-bottom: 48px;  */
 }
 
@@ -284,7 +287,7 @@ main.main-container {
     border: 1px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;    
+    transition: transform 0.5s, opacity 0.5s;
     position: absolute;
     transform: scale(0.6);
     opacity: 0.6;
@@ -356,19 +359,13 @@ main.main-container {
 .carousel-item-cv li {
     position: relative;
     z-index: 1;
-   
+
 }
+
 h2 {
     display: none;
 }
-/* .carousel-cv h2,
-.carousel-presentation h2 {
-    display: flex;
-    justify-content: center;
-    color: black;
-    position: relative;
-    z-index: 1;
-} */
+
 .carousel-cv ul,
 .carousel-presentation ul {
     display: flex;
@@ -378,13 +375,14 @@ h2 {
     margin: 15px auto;
     padding: 10px;
 }
+
 .carousel-cv li,
 .carousel-presentation li {
     display: flex;
     justify-content: flex-start;
     color: black;
     margin: 15px;
-    
+
 }
 
 
@@ -451,17 +449,19 @@ h2 {
     font-size: 16px;
     border: 2px solid var(--tag-border-color);
 }
+
 .tag:hover {
-    background-color: var(--tag-background-color-hover);  
+    background-color: var(--tag-background-color-hover);
     border: 2px solid var(--tag-border-color-hover);
 }
+
 button {
     /* background-color: transparent; */
     background-color: var(--tag-background-color);
     margin: 0 10px;
     font-size: 27px;
     color: var(--link-color);
-    
+
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
@@ -478,11 +478,12 @@ button:hover {
     cursor: pointer;
     border: 2px solid var(--tag-border-color-hover);
 }
+
 button.active {
-    background-color: var(--toggle-background); 
-    color: white; /* Couleur du texte */
-    border: 1px solid var(--tag-border-color); /* Bordure */
-    /* Autres styles pour l'état de survol */
+    background-color: var(--toggle-background);
+    color: white;
+    border: 1px solid var(--tag-border-color);
+
 }
 
 /* ********************* Modal styles ********************* */
@@ -505,10 +506,6 @@ button.active {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    /* padding-top: 30px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px; */
     border: 1px solid #888;
     width: 560px;
     height: 365px;
@@ -516,9 +513,9 @@ button.active {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    position: absolute; /* La position est absolue pour pouvoir être positionnée dynamiquement */
-    /* Vous pouvez retirer `top` et `left` ici */
-    /* transform: translate(-50%, -50%); - Ajustement dynamique via JavaScript */
+    position: absolute;
+
+
 }
 
 .modal-description,
@@ -537,14 +534,14 @@ button.active {
 
 
 .close {
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .close:hover,
@@ -563,41 +560,25 @@ button.active {
     filter: blur(1px);
     transition: filter 0.5s;
 }
+
 /* ********************* Form ********************* */
-/* .carousel-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: 400px;
-    margin: 0 10px;
-    border-radius: 20px;
-    border: 1px solid var(--carousel-border);
-    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
-    animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;
-    
-    position: relative;
-    
-    opacity: 1;
-    background-color: white;
-} */
 
 .carousel-container-form {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
     /* overflow: hidden;  */
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px;  
-    margin-bottom: 15px; 
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
+
 .carousel-form .carousel-item-form {
     width: 600px;
     height: 400px;
@@ -606,9 +587,9 @@ button.active {
     border: 1px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;    
+    transition: transform 0.5s, opacity 0.5s;
     position: absolute;
-    
+
     background-color: white;
 }
 
@@ -621,25 +602,7 @@ button.active {
     position: relative;
     height: 480px;
 }
-/* .carousel-form {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 480px;
-    border-radius: 20px;
-    border: 1px solid var(--carousel-border);
-    box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
-    animation: var(--carousel-animation);
-    transition: transform 0.5s, opacity 0.5s;    
-    /* position: absolute; */
-    /*
-    transform: scale(0.6);
-    opacity: 1;
-    background-color: white;
-} */
+
 
 
 .form-title {
@@ -667,27 +630,18 @@ button.active {
     align-items: center;
 }
 
-/* .form-field {
-    margin: 10px auto;
-} */
-
-/* .form-field label {
-    display: block;
-    font-size: 16px;
-    color: black;
-    margin-bottom: 5px;
-} */
-
 .form-field label {
     width: 100%;
     font-size: 16px;
     color: black;
     margin-bottom: 10px;
-    text-align: left;  /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
 }
+
 .form-field input,
 .form-field textarea {
-    
+
     width: 90%;
     padding: 10px;
     border-radius: 10px;
@@ -703,12 +657,12 @@ button.active {
     height: 100px;
 }
 
-/* Style pour le bouton de soumission */
+/************* Style pour le bouton de soumission ***********/
 
 .carousel-form button {
-    display: block; /* Assurez-vous que le bouton est un élément bloc */
-    margin: 20px auto; /* Centrez le bouton horizontalement */
-    width: auto; /* Ajustez la largeur automatiquement */
+    display: block;
+    margin: 20px auto;
+    width: auto;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--tag-border-color);
@@ -718,20 +672,6 @@ button.active {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-/* .carousel-form button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--tag-border-color);
-    background-color: var(--tag-background-color);
-    color: var(--link-color);
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-} */
 
 .carousel-form button:hover {
     background-color: var(--tag-background-color-hover);
@@ -762,6 +702,7 @@ footer p {
     color: var(--footer-text-color);
 }
 
-.carousel .prev, .carousel .next {
+.carousel .prev,
+.carousel .next {
     display: none;
 }

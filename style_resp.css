@@ -2,7 +2,6 @@
 
     body {
 
-        /* height: 100%; */
         overflow: auto;
         background-color: var(--background-color);
     }
@@ -67,7 +66,6 @@
         display: none;
     }
 
-
     .carousel-item-cv.active {
         display: block;
         transform: translateX(0) scale(1);
@@ -89,7 +87,7 @@
         z-index: 2;
     }
 
-    
+
     /**********          Carousel Présentation          **********/
 
     .carousel-container-presentation {
@@ -150,7 +148,7 @@
     }
 
     .carousel-item-ocr.next {
-        display: block;       
+        display: block;
         transform: translateX(0) scale(0.8);
         opacity: 0.8;
         z-index: 2;
@@ -161,7 +159,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        margin-top: 10px;        
+        margin-top: 10px;
         width: 320px;
     }
 
@@ -174,7 +172,7 @@
         flex-direction: row;
         justify-content: center;
         gap: 7px;
-        margin-top: 35px;        
+        margin-top: 35px;
         width: 320px;
     }
 
@@ -194,7 +192,7 @@
         width: 100%;
         height: auto;
     }
-   
+
 
 
     /**********          Carousel Cv          **********/
@@ -202,20 +200,20 @@
     .carousel-container-form {
         margin-bottom: 580px;
     }
-    
-    
-    
+
+
+
     /**********          bouton previous et next          **********/
 
-        .prev_bouton,
+    .prev_bouton,
     .next_bouton {
-        position: absolute;        
+        position: absolute;
         transform: translateY(0);
-        background: var(--scrollbar-thumb-background);        
+        background: var(--scrollbar-thumb-background);
         border: none;
         cursor: pointer;
         z-index: 4;
-        
+
     }
 
     .prev_bouton:hover,
@@ -293,5 +291,5 @@
         overflow: hidden;
     }
 
-    
+
 }
