@@ -31,7 +31,7 @@
             "De plus, j'ai amélioré mes compétences en accessibilité web et produit des rapports d’optimisation détaillant toutes les actions entreprises et leur impact."
         ],
         "problematique":[
-            "Optimisation des Images:",
+            "Optimisation des Images :",
             "S'assurer que les dimensions des images, notamment les photos de couverture, sont appropriées pour le site afin de réduire le temps de chargement.",
             "Cela implique également de minimiser le code et de supprimer le code inutile pour améliorer les performances du site."
         ]
@@ -63,9 +63,9 @@
         ],
         "problematique":[
             
-            "Gestion de la Responsivité:",
+            "Gestion de la Responsivité :",
             "Ajustement et mise en page des composants pour qu'ils restent alignés et centrés conformément à la maquette Figma.",            
-            "Gestion des Collapses:",
+            "Gestion des Collapses :",
             "Assurer une animation de transition fluide pour l'ouverture et la fermeture des collapses, conformément à la maquette Figma."
             
         ]
@@ -96,9 +96,9 @@
         "J'ai conçu la page de présentation des travaux de l'architecte à partir du HTML fourni, ainsi que la page de connexion de l'administrateur du site, que j'ai codée depuis zéro. J'ai également créé une modale permettant d'uploader de nouveaux travaux.",
         "En plus de ces tâches, j'ai acquis des compétences en récupération des données utilisateurs via des formulaires en JavaScript, en manipulation des éléments du DOM, et en gestion des événements utilisateurs avec JavaScript."
         ],
-        "problematique":["Gestion Dynamique des Données:", 
+        "problematique":["Gestion Dynamique des Données :", 
         "Assurer la récupération et la gestion efficace des données des catégories et des projets depuis l'API tout en évitant les duplications et en maintenant une bonne performance de l'application.",
-        "Gestion de l'Ouverture de la Modale:",
+        "Gestion de l'Ouverture de la Modale :",
         "Assurer une ouverture fluide et réactive de la modale pour l'upload de nouveaux médias, tout en garantissant une expérience utilisateur optimale."
 
         ]
@@ -125,7 +125,7 @@
             "Cette expérience m'a permis de développer une meilleure compréhension des besoins d'une start-up et d'améliorer la qualité visuelle et fonctionnelle des sites web."
         ],
         "problematique":[
-            "Attention aux Détails de la Maquette:",
+            "Attention aux Détails de la Maquette :",
             "Veiller à ce que tous les détails de la maquette Figma soient correctement intégrés et adaptés pour les versions desktop, mobile et tablette du site, en respectant les spécifications de design pour chaque type d'appareil.",
             "Cela inclut la gestion des espacements, des tailles de police, des images et des éléments interactifs afin d'assurer une cohérence visuelle et une expérience utilisateur optimale à travers toutes les plateformes."
         ]
@@ -154,7 +154,12 @@
 		"competences":["Dans le cadre du développement du site Mon Vieux Grimoire, j'ai acquis plusieurs compétences clés en back-end. J'ai travaillé avec Node.js pour développer les fonctionnalités du site, tout en mettant en place un modèle logique de données conforme à la réglementation.",
         "J'ai assuré la mise en œuvre sécurisée des opérations CRUD pour gérer les livres et les notes, ainsi que le stockage sécurisé des données, y compris le hashage des mots de passe. J'ai utilisé MongoDB comme base de données pour stocker les informations, et implémenté une authentification sécurisée avec des tokens JWT pour garantir la sécurité des connexions des membres."
         ],
-        "problematique":[
+        "problematique":["Validation des Adresses E-mail et des Mots de Passe :",
+        "Implémenter un contrôle efficace pour vérifier la validité des adresses e-mail et le format des mots de passe afin d'assurer la sécurité et l'intégrité des données des utilisateurs.",
+        "Cela inclut la mise en place de règles de validation appropriées et des messages d'erreur clairs pour les utilisateurs.",
+        "Gestion des Routes API et des Erreurs :",
+        "Veiller à ce que les routes de l'API fonctionnent correctement avec la base de données, en s'assurant qu'elles répondent correctement aux requêtes et en gérant les erreurs de manière appropriée.",
+        "Cela inclut la validation des données entrantes et sortantes pour éviter les erreurs de code et garantir une communication fluide entre le front-end et le back-end."
 
         ]
 	}
