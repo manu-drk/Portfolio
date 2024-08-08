@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    applyScrollbarsToElements('.carousel-cv');
     console.log('DOM fully loaded and parsed');
 
     function loadCvCarousel() {
@@ -173,7 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCvCarousel();
 });
 
+//************************************************************** */
 
+//************************************************************ */
+
+//************************************************************** */
 
 //************************************************************ */
 

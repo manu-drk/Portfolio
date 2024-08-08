@@ -20,7 +20,21 @@
         z-index: -1;
     }
 
-
+    nav ul {
+        
+        height: 50px;
+      
+    }
+    #mode-toggle-container {
+       
+        top: 13px;
+       
+    }
+    footer {
+       
+        height: 50px;
+       
+    }
     /**********          Carousel Index          **********/
 
 
@@ -297,5 +311,10 @@
         overflow: hidden;
     }
 
+    .carousel .prev img,
+    .carousel .next img {
+        width: 20px;
+        height: auto;
+    }
 
 }
