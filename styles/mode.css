@@ -60,6 +60,7 @@ body.dark-mode #mode-toggle {
     #mode-toggle-container {
        
         top: 13px;
+        width: 31px;
        
     }
 }

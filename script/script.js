@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 carouselItem.setAttribute('class', 'carousel-item');
                 carouselItem.setAttribute('data-index', index);
                 carouselItem.setAttribute('data-link', item.link);
-                carouselItem.setAttribute('data-title', item.title);
+                // carouselItem.setAttribute('data-title', item.title);
 
                         // Add title
                         // const title = document.createElement('h2');

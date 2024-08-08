@@ -2,23 +2,31 @@
 
 .scroll-indicator {
     position: absolute;
-    bottom: 190px; /* Ajustez selon vos besoins */
-    left: 50%;
+    /* position: fixed; */
+    bottom: 30px; /* Ajustez selon vos besoins */
+    /* left: 50%; */
+    right: 50px;
     transform: translateX(-50%);
     z-index: 1000;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     color: var(--carousel-border); 
-    opacity: 0.7;
+    opacity: 0.9;
     cursor: pointer;
     display: none; 
+    pointer-events: none;
 }
 
 /* Animation de clignotement */
+
+
+
+/* .scroll-indicator span {
+    animation: blink 1.5s infinite;
+} */
 .scroll-indicator span {
     animation: blink 1.5s infinite;
 }
-
 /* Animation de clignotement */
 @keyframes blink {
     0%, 100% { opacity: 1; }
