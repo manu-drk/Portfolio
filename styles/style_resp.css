@@ -440,7 +440,8 @@
     .carousel-item.active {
         
         width: 80%;
-        height: auto;
+        height: 40%;
+        /* height: auto; */
         box-shadow: none;
             animation: none;
             border: 2px solid var(--carousel-border);
@@ -686,6 +687,20 @@
             margin: 10px 5px;
             font-size: 0.8em;
         }
+
+
+        .close {
+            position: absolute;
+            top: 0px;
+            right: 4px;
+            color: #4c4b4b;
+            font-size: 21px;
+            font-weight:400;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+
     .carousel-container {
         overflow: hidden;
     }
@@ -735,7 +750,7 @@
     } */
     .carousel-item img {
         width: 100%;
-        height: auto;
+        height: 100%;
       
     
 }
@@ -784,7 +799,7 @@ footer p {
 footer {
     height: 50px;
 }
-}
+
 
 /*******************************************/
 
@@ -803,6 +818,11 @@ footer {
         border: 2px solid var(--carousel-border);
     
 }
+}
+
+
+
+
 
 /********/
 
