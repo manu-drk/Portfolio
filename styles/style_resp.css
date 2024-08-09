@@ -21,20 +21,23 @@
     }
 
     nav ul {
-        
+
         height: 50px;
-      
+
     }
+
     #mode-toggle-container {
-       
+
         top: 13px;
-       
+
     }
+
     footer {
-       
+
         height: 50px;
-       
+
     }
+
     /**********          Carousel Index          **********/
 
 
@@ -215,8 +218,8 @@
     /**********          Carousel formulaire          **********/
 
     .carousel-container-form {
-        /* margin-bottom: 580px; */
-        margin-bottom: 450px;
+        /* margin-bottom: 580px */
+        margin-bottom: 368px
     }
 
 

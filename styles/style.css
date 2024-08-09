@@ -65,13 +65,13 @@ body::before {
     background: var(--scrollbar-track-background);
     border-radius: 15px;
     height: 200px;
-} 
+}
 
 ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb-background);
     border-radius: 15px;
     height: 60%;
-    
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -155,7 +155,7 @@ h1 {
     text-transform: uppercase;
     font-size: 30px;
     font-weight: normal;
-    
+
 
 }
 
@@ -165,16 +165,19 @@ main.main-container {
     margin-top: 60px;
     padding-bottom: 190px;
 }
+
 main.main-container-ocr {
     width: 100%;
     margin-top: 15px;
     padding-bottom: 60px;
 }
+
 main.main-container-pro {
     width: 100%;
     margin-top: 15px;
     padding-bottom: 60px;
 }
+
 /* ********************* carousels  ********************* */
 
 .carousel-container {
@@ -282,7 +285,6 @@ main.main-container-pro {
     width: 600px;
     height: 400px;
     margin: 0 10px;
-    /* border-radius: 20px; */
     border-radius: 6px;
     border: 2px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
@@ -298,8 +300,6 @@ main.main-container-pro {
 .carousel-item img {
     width: 600px;
     height: 400px;
-    /* border-radius: 20px; */
-    /* border-radius: 6px; */
     border-radius: 4px;
 }
 
@@ -341,7 +341,6 @@ main.main-container-pro {
     width: 600px;
     height: 400px;
     margin: 0 10px;
-    /* border-radius: 20px; */
     border-radius: 6px;
     border: 1px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
@@ -375,14 +374,13 @@ main.main-container-pro {
     align-items: center;
     position: relative;
     height: 469px;
-    /* height: 480px; */
+
 }
 
 
 .carousel-item-ocr img {
     width: 586px;
     height: 386px;
-    /* border-radius: 20px; */
     border-radius: 6px;
     border: 7px solid white;
 }
@@ -395,14 +393,13 @@ main.main-container-pro {
     align-items: center;
     position: relative;
     height: 469px;
-    /* height: 480px; */
+
 }
 
 
 .carousel-item-pro img {
     width: 586px;
     height: 386px;
-    /* border-radius: 20px; */
     border-radius: 6px;
     border: 7px solid white;
 }
@@ -429,18 +426,14 @@ h2 {
     display: none;
 }
 
-/* h2 {
-    display: flex;
-    justify-content: flex-start;
-    color: black;
-    margin: 15px;
-} */
+
 .cv-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
+
 h3 {
     display: flex;
     justify-content: flex-start;
@@ -460,6 +453,7 @@ h3 {
     margin-bottom: 15px;
 
 }
+
 .carousel-cv ul,
 .carousel-presentation ul {
     display: flex;
@@ -501,13 +495,12 @@ h3 {
     justify-content: center;
     gap: 10px;
     margin-top: 0px;
-    /* margin-top: 10px; */
+
 
 }
 
 .links-container a {
     margin: 0 10px;
-    /* font-size: 27px; */
     font-size: 24px;
     color: var(--link-color);
     text-decoration: none;
@@ -552,17 +545,15 @@ h3 {
 }
 
 button {
-    /* background-color: transparent; */
+
     background-color: var(--tag-background-color);
     margin: 0 10px;
     font-size: 24px;
-    /* font-size: 27px; */
     color: var(--link-color);
 
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
-    /* border: none; */
     border: 2px solid var(--tag-border-color);
     padding: 7px 15px;
 
@@ -593,8 +584,7 @@ button.active {
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.7); */
+
 }
 
 
@@ -606,11 +596,9 @@ button.active {
     border: 1px solid #888;
     width: 560px;
     height: 365px;
-    /* border-radius: 20px; */
     border-radius: 6px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     position: absolute;
 
 
@@ -621,7 +609,6 @@ button.active {
 .modal-problematique {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     color: black;
 }
@@ -630,7 +617,6 @@ button.active {
     color: black;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -671,7 +657,7 @@ button.active {
 
 .modal-description p {
 
-    margin: 10px 0;
+    margin: 4px 0;
 }
 
 .blur {
@@ -688,12 +674,13 @@ button.active {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* overflow: hidden;  */
+
     position: relative;
     padding: 20px;
     box-sizing: border-box;
     flex-direction: column;
-    margin-top: 50px;
+
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
@@ -701,7 +688,7 @@ button.active {
     width: 600px;
     height: 400px;
     margin: 0 10px;
-    border-radius: 20px;
+    border-radius: 6px;
     border: 1px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
     animation: var(--carousel-animation);
@@ -736,9 +723,7 @@ button.active {
 
 /* Styles pour les champs du formulaire */
 
-/* .form-field {
-    margin: 15px 15px;
-} */
+
 
 .form-field {
     margin: 10px auto;
@@ -754,7 +739,7 @@ button.active {
     color: black;
     margin-bottom: 10px;
     text-align: left;
-    /* Align text to the left */
+
 }
 
 .form-field input,
@@ -766,7 +751,7 @@ button.active {
     border: 1px solid var(--carousel-border);
     box-sizing: border-box;
     font-size: 16px;
-    color: var(--text-color);
+    color: black;
 
 }
 
@@ -793,9 +778,10 @@ button.active {
 
 .carousel-form button:hover {
     background-color: var(--tag-background-color-hover);
-    border-color: var(--tag-border-color-hover);
-    color: var(--link-hover-shadow);
+    text-shadow: 0 0 1px var(--link-hover-shadow);
+    border: 2px solid var(--tag-border-color-hover);
 }
+
 
 /* ********************* Footer ********************* */
 
