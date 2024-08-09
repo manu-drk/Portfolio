@@ -52,7 +52,7 @@ body::before {
 /********************** SCROLL BAR ************************* */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 250px;
+    height: 10px;
     max-height: 250px;
     position: relative;
     left: 50px;
@@ -132,7 +132,16 @@ main.main-container {
     margin-top: 60px;
     padding-bottom: 190px;
 }
-
+main.main-container-cv {
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 190px;
+}
+main.main-container-presentation {
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 190px;
+}
 main.main-container-ocr {
     width: 100%;
     margin-top: 15px;
