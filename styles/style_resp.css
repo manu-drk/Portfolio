@@ -739,6 +739,44 @@
       
     
 }
+/************************     pro  ***************/
+
+main.main-container-pro {
+    width: 100%;
+    /* margin-top: 115px; */
+    margin-top: 26px;
+    padding-bottom: 60px;
+}
+
+.carousel-pro .carousel-item-pro {
+    display: block;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+    width: 80%;
+            height: 100%;
+    box-shadow: none;
+    animation: none;
+    border: 2px solid var(--carousel-border);
+}
+
+.carousel-pro {
+
+    overflow: visible;
+    height: 200px;
+
+    
+}
+
+.carousel-item-pro img {
+    width: 98%;
+    height: 97%; 
+    border: 9px solid white;
+}
+
+
+/*******************************************************/
+
 
 footer p {
     font-size: 1.2em;
@@ -747,6 +785,7 @@ footer {
     height: 50px;
 }
 }
+
 /*******************************************/
 
 .carousel-container-form {
