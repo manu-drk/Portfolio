@@ -42,6 +42,13 @@ body.dark-mode #mode-toggle {
     transform: translateX(10px);
 }
 
+.toggle-icon {
+    content: var(--toggle-icon);
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+    font-size: 24px; /* Ajuster la taille selon vos besoins */
+    line-height: 1; /* Pour éviter tout décalage vertical */
+} 
+
 #mode-toggle::before {
     content: var(--toggle-icon);
     position: absolute;
@@ -60,4 +67,27 @@ body.dark-mode #mode-toggle {
         right: 15px;
 
     }
+}
+
+
+@media (max-width: 768px) {
+
+    #mode-toggle::before {
+    
+        width: 21px;
+        height: 24px;
+        
+    }
+    }
+
+
+@media (max-width: 450px) {
+
+
+#mode-toggle::before {
+    
+    width: 21px;
+    height: 24px;
+    
+}
 }
