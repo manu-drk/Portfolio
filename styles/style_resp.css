@@ -77,7 +77,9 @@
     ::-webkit-scrollbar {
         width: 6px;
     }
-
+    footer p {
+        font-size: 1em;
+    }
 }
 
 
@@ -238,6 +240,7 @@
     main.main-container-cv {
         width: 100%;
         margin-top: 0px;
+        padding-bottom: 85px;
 
     }
 
@@ -283,7 +286,7 @@
     }
 
     main.main-container-cv {
-    padding-bottom: 50px;
+    padding-bottom: 85px;
     }
 }
 
@@ -331,7 +334,9 @@
 @media (max-width: 768px) {
     main.main-container-presentation {
         width: 100%;
+        /* margin-top: 0px; */
         margin-top: 0px;
+        padding-bottom: 85px;
     }
 
     .carousel-presentation {
@@ -377,9 +382,7 @@
         font-size: 0.8em;
     }
 
-    .carousel-container-presentation {
-        margin-bottom: 99px
-    }
+   
 }
 
 
@@ -718,8 +721,20 @@
     .links-container {
         
         flex-direction: column;
+        margin-top: 0%;
         
 
+    }
+
+    .tags-container {
+    
+        margin-top: 2%;
+    
+    }
+    .tag {
+        
+        padding: 2px 8px;
+        
     }
     .modal-content {
         width: auto;
@@ -749,6 +764,11 @@
 
 
 @media (max-width: 1024px) {
+
+    .carousel-container-pro { 
+        width: 90%;
+    }
+
     .carousel-item-pro {
         transform: none;
         opacity: 1;
@@ -764,6 +784,11 @@
 }
 
 @media (max-width: 768px) {
+
+    .carousel-container-pro { 
+        width: 95%;
+    }
+
     main.main-container-pro {
         width: 100%;
         /* margin-top: 115px; */
@@ -780,13 +805,13 @@
         height: 100%;
         box-shadow: none;
         animation: none;
-        border: 2px solid var(--carousel-border);
+        border: 3px solid var(--carousel-border);
     }
 
     .carousel-pro {
 
         overflow: visible;
-        height: 200px;
+        /* height: 200px; */
 
 
     }
@@ -800,7 +825,15 @@
 
 }
 
-@media (max-width: 450px) {}
+@media (max-width: 450px) {
+    .carousel-pro {
+
+       
+        height: 200px;
+
+
+    }
+}
 
 
 /**********          Carousel formulaire          **********/
