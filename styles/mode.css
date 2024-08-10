@@ -17,6 +17,7 @@ body {
     border-radius: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 4px;
     cursor: pointer;
     transform: scale(1);
@@ -35,11 +36,11 @@ body {
 }
 
 body.light-mode #mode-toggle {
-    transform: translateX(0);
+    transform: translateX(-5px);
 }
 
 body.dark-mode #mode-toggle {
-    transform: translateX(10px);
+    transform: translateX(5px);
 }
 
 .toggle-icon {
