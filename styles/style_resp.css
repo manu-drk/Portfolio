@@ -716,12 +716,14 @@
         justify-content: center;
         max-height: 237px;
         min-height: 237px;
+        margin-top: 3%;
 
     }
     .links-container {
         
         flex-direction: column;
         margin-top: 0%;
+        gap: 5px;
         
 
     }
