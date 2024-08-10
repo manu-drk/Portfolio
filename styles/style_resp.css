@@ -142,7 +142,7 @@
         height: auto;
         box-shadow: none;
         animation: none;
-        border: 2px solid var(--carousel-border);
+        border: 3px solid var(--carousel-border);
     }
 
     .carousel-container {
@@ -162,11 +162,21 @@
     .carousel-item img {
         width: 100%;
         height: 100%;
+        display: block;
+        /* border: 7px solid white; */
 
     }
 }
 
-@media (max-width: 450px) {}
+@media (max-width: 450px) {
+
+    .carousel-item.active {
+
+        height: 40%;
+    }
+
+
+}
 
 /**********          Carousel Cv          **********/
 @media (max-width: 1024px) {
@@ -406,6 +416,10 @@
 
 @media (max-width: 1024px) {
 
+    .carousel-container-ocr { 
+        width: 90%;
+    }
+
     .carousel-ocr {
         overflow: visible;
     }
@@ -520,7 +534,9 @@
         margin-top: 26px;
         padding-bottom: 60px;
     }
-
+.carousel-container-ocr {
+        width: 95%;
+    }
     .carousel-ocr {
 
         overflow: visible;
@@ -552,7 +568,7 @@
         height: 100%;
         box-shadow: none;
         animation: none;
-        border: 2px solid var(--carousel-border);
+        border: 3px solid var(--carousel-border);
     }
 
 
