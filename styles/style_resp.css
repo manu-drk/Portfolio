@@ -76,6 +76,7 @@
 
     ::-webkit-scrollbar {
         width: 6px;
+        height: 5px;
     }
     footer p {
         font-size: 1em;
@@ -672,7 +673,7 @@
     }
 
     .modal-description {
-        margin: 10px 0;
+        margin: 7px 0;
         justify-content: space-around;
     }
 
@@ -682,7 +683,7 @@
 
     .modal-description p {
         margin: 10px 5px;
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
 
