@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             input = document.createElement('input');
                             input.setAttribute('type', field.type);
                         }
-
-                        input.setAttribute('id', fieldId);  // Associer le id au champ
+                        // Associer le id au champ
+                        input.setAttribute('id', fieldId);  
                         input.setAttribute('name', field.name);
                         input.setAttribute('placeholder', field.placeholder);
                         formField.appendChild(input);
