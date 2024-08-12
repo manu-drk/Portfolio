@@ -232,7 +232,9 @@
         opacity: 0.8;
         z-index: 2;
     }
-
+.cv-item h3 {
+    padding-top: 20px;
+}
 }
 
 @media (max-width: 768px) {
@@ -351,11 +353,12 @@
         flex-direction: column;
         /* justify-content: flex-start; */
         justify-content: center; /* Centre les éléments verticalement */
-        align-items: center;
-        width: 550px;
+        align-items: flex-start;
+        width: 100%;
         margin: 15px auto;
-        padding: 10px;
-        height: 100vh;
+        padding: 0px;
+        padding-top: 15%;
+        /* height: 100vh; */
     }
 }
 
@@ -422,7 +425,9 @@
     .carousel-container-presentation {
         margin-bottom: 0px;
     }
-
+    .carousel-item-presentation ul {
+    padding-top: 10%;
+    }
     .carousel-item-presentation ul,
     .carousel-item-presentation li {
 
