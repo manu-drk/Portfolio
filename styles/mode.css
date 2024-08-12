@@ -46,15 +46,17 @@ body.dark-mode #mode-toggle {
 .toggle-icon {
     content: var(--toggle-icon);
     font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
-    font-size: 24px; 
+    font-size: 16px; 
     line-height: 1; 
 } 
 
 #mode-toggle::before {
     content: var(--toggle-icon);
     position: absolute;
-    width: 27px;
-    height: 30px;
+    /* width: 27px;
+    height: 30px; */
+    width: 16px;
+    height: 21px;
     border-radius: 50%;
 }
 
@@ -76,7 +78,7 @@ body.dark-mode #mode-toggle {
     #mode-toggle::before {
     
         width: 21px;
-        height: 24px;
+        height: 19px;
         
     }
     }
@@ -87,8 +89,8 @@ body.dark-mode #mode-toggle {
 
 #mode-toggle::before {
     
-    /* width: 21px;
-    height: 24px; */
+    width: 21px;
+    height: 17px;
     font-size: 16px;
     
 }
