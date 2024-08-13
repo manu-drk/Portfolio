@@ -467,8 +467,8 @@ button.active {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 559px;
-    height: 360px;
+    width: 562px;
+    height: 362px;
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -496,7 +496,8 @@ button.active {
     justify-content: flex-start;
     flex-direction: column;
     color: black;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    margin-left: 15px;
     margin-bottom: 10px;
 }
 
