@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     console.log('DOM fully loaded and parsed');
 
     function loadCvCarousel() {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let nextButton = null;
 
                 function createCarouselItems() {
-                    carouselContainer.innerHTML = ''; // Clear existing items
+                    carouselContainer.innerHTML = '';
 
                     carouselData.forEach((section, index) => {
                         const carouselItem = document.createElement('div');
@@ -34,12 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         carouselItem.setAttribute('data-index', index);
                         carouselItem.setAttribute('data-title', section.title);
 
-                        // Add title
                         const title = document.createElement('h2');
                         title.innerText = section.title;
                         carouselItem.appendChild(title);
 
-                        // Add description items
                         section.items.forEach(item => {
                             const itemContainer = document.createElement('div');
                             itemContainer.setAttribute('class', 'cv-item');
@@ -163,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Garder l'onglet actif
                 window.addEventListener('focus', () => {
-                    showCvCarouselItem(currentIndexCv); // Assurer que l'affichage du carrousel est mis à jour
+                    showCvCarouselItem(currentIndexCv); r
                 });
             })
             .catch(error => {

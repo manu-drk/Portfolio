@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         items[0].style.opacity = '1';
                         items[0].style.zIndex = 3;
                         details[0].style.display = 'block';
-                        titleElement.innerText = carouselData[0].title; // Afficher le titre du premier item
+                        titleElement.innerText = carouselData[0].title; 
                         return;
                     }
 

@@ -18,8 +18,7 @@ div {
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    /* margin: 0; */
+body {    
     padding: 0;
     width: 100%;
     max-width: 1440px;
@@ -47,11 +46,8 @@ body::before {
 }
 
 
-/* ::-webkit-scrollbar {
-    display: none;
-
-} */
 /********************** SCROLL BAR ************************* */
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -243,8 +239,7 @@ main.main-container-pro {
     border-radius: 6px;
     border: 2px solid var(--carousel-border);
     box-shadow: 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow), 0 0 20px var(--carousel-shadow);
-    animation: var(--carousel-animation);
-    /* animation: animate 2s infinite alternate; */
+    animation: var(--carousel-animation);    
     transition: transform 0.5s, opacity 0.5s;
     cursor: pointer;
     position: absolute;
@@ -549,10 +544,6 @@ button.active {
     font-size: 24px;
     color: var(--text-color);
 }
-
-/* Styles pour les champs du formulaire */
-
-
 
 .form-field {
     margin: 10px auto;

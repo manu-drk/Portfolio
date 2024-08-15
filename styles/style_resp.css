@@ -184,6 +184,7 @@
 }
 
 /**********          Carousel Cv          **********/
+
 @media (max-width: 1024px) {
     main.main-container-cv {
         width: 100%;
@@ -289,7 +290,6 @@
     padding-bottom: 85px;
     }
 }
-
 
 
 
@@ -498,15 +498,6 @@
         z-index: 2;
     }
 
-    /* .links-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-        width: 320px;
-    } */
-
     .links-container {
         display: flex;
         flex-direction: row;
@@ -518,15 +509,6 @@
     .links-container a {
         text-align: center;
     }
-
-    /* .tags-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 7px;
-        margin-top: 35px;
-        width: 320px;
-    } */
 
     .tags-container {
         display: flex;
@@ -547,17 +529,13 @@
         justify-content: center;
         margin-top: 150px;
         max-height: 200px;
-        min-height: 200px;
-        /* max-height: 450px;
-        min-height: 450px; */
+        min-height: 200px;      
     }
 
     .modal-content {
         padding: 16px;
         width: 675px;
         height: 437px;
-            /* width: 100%;
-            height: 100%; */
         
     }
 }
@@ -567,7 +545,7 @@
 
     main.main-container-ocr {
         width: 100%;
-        /* margin-top: 115px; */
+        
         margin-top: 26px;
         padding-bottom: 60px;
     }
@@ -577,7 +555,7 @@
     }
     .carousel-ocr {
         overflow: visible;
-        /* height: 200px; */
+    
     }
 
     .carousel-item-ocr img {
@@ -622,18 +600,9 @@
         z-index: 2;
     }
 
-    /* .links-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-            width: 320px;
-        } */
 
     .links-container {
-        display: flex;
-        /* flex-direction: column; */
+        display: flex;        
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -654,20 +623,10 @@
         padding: 5px 10px;
     }
 
-    /* .tags-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 7px;
-            margin-top: 35px;
-            width: 320px;
-        } */
-
     .tags-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        /* gap: 4px; */
         margin-top: 4%;
         row-gap: 6px;
         column-gap: 0px
@@ -690,8 +649,6 @@
     .modal-content {
         width: auto;
         height: auto;
-        /* min-width: 543px;        
-        min-height: 430px; */
         min-width: 521px;        
         min-height: 438px;
         padding: 17px;
@@ -704,7 +661,7 @@
 
     .modal-description {
         margin: 7px 0;
-               
+        
     }
 
     .ocr-item h3 {
@@ -818,7 +775,6 @@
 
     main.main-container-pro {
         width: 100%;
-        /* margin-top: 115px; */
         margin-top: 26px;
         padding-bottom: 60px;
     }
@@ -837,7 +793,6 @@
 
     .carousel-pro {
         overflow: visible;
-        /* height: 200px; */
     }
 
     .carousel-item-pro img {
@@ -861,7 +816,6 @@
 
 @media (max-width: 1024px) {
     .carousel-container-form {
-        /* margin-bottom: 580px */
         margin-bottom: 368px
     }
 
@@ -875,12 +829,7 @@
         height: 541px;
         width: 780px;
     }
-    /* .carousel-item-form {
-        height: 480px;
-        width: 100%;
-        overflow: visible;
-    } */
-
+    
 }
 
 
@@ -896,7 +845,6 @@
         margin-bottom: 119px;
     }
     .carousel-form {
-        /* height: 541px; */
         width: 95%;
     }
 
@@ -949,14 +897,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 /**********          bouton previous et next          **********/
 
 
@@ -975,13 +915,12 @@
         width: 50px;
 
         display: flex;
-        justify-content: center; /* Centre horizontalement */
+        justify-content: center; 
         align-items: center;
     }
 
     .prev_bouton img,
     .next_bouton img {
-        /* right: -7%; */
         width: 29px;
         height: 60px;
         align-items: center;
@@ -1024,15 +963,9 @@
 
     }
 
-    /* .carousel .prev img,
-    .carousel .next img {
-        width: 10px;
-        height: 10px;
-    } */
 
     .prev_bouton img,
     .next_bouton img {
-        /* right: -7%; */
         width: 12px;
         height: 30px;
         align-items: center;

@@ -17,8 +17,6 @@
     --tag-border-color: #11790d;
     --tag-border-color-hover: #28a745;
     --toggle-background: #28a745;
-
-    /* --toggle-icon: '☀️'; */
     --toggle-icon: url(../icons/sun-favicon-16x16.png);
     --scrollbar-track-background: #0907103a;
     --scrollbar-thumb-background: #01bb0a94;
@@ -47,8 +45,7 @@
     --tag-text-color: #000;
     --tag-border-color: #007bff;
     --tag-border-color-hover: #0e81fc;
-    --toggle-background: #007bff;
-    /* --toggle-icon: '🌙'; */
+    --toggle-background: #007bff;    
     --toggle-icon: url(../icons/moon-favicon-16x16.png);
     --scrollbar-track-background: #ccc;
     --scrollbar-thumb-background: #0056b3;
