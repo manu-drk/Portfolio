@@ -692,8 +692,9 @@
         height: auto;
         /* min-width: 543px;        
         min-height: 430px; */
-        min-width: 524px;        
-        min-height: 441px;
+        min-width: 521px;        
+        min-height: 438px;
+        padding: 17px;
     }
 
     .ocr-item {
@@ -703,7 +704,7 @@
 
     .modal-description {
         margin: 7px 0;
-        
+               
     }
 
     .ocr-item h3 {
