@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Nina Carducci",
-        "cover": "./images/Nina.jpg",
+        "cover": "./images/Nina.webp",
         "Site": "https://manu-drk.github.io/Developpeur-Web-Projet-4-Nina-Carducci",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-4-Nina-Carducci",
         "tags": [
@@ -44,7 +44,7 @@
     {
         "id": "2",
         "title": "Kasa",
-        "cover": "./images/Kasa.jpg",
+        "cover": "./images/Kasa.webp",
         "Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-5-Kasa",
         "tags": [
@@ -88,7 +88,7 @@
     {
         "id": "3",
         "title": "Sophie Bluel",
-        "cover": "./images/Sophie.jpg",
+        "cover": "./images/Sophie.webp",
         "Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-3-Sophie-Bluel",
         "tags": [
@@ -131,7 +131,7 @@
     {
         "id": "4",
         "title": "Booki",
-        "cover": "./images/Booki.jpg",
+        "cover": "./images/Booki.webp",
         "Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-2-Booki",
         "tags": [
@@ -162,7 +162,7 @@
     {
         "id": "5",
         "title": "Mon vieux grimoire",
-        "cover": "./images/Grimoire.jpg",
+        "cover": "./images/Grimoire.webp",
         "Site": "",
         "Github": "https://github.com/manu-drk/Developpeur-Web-Projet-6-Mon-Vieux-Grimoire",
         "tags": [

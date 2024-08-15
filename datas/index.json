@@ -2,31 +2,31 @@
 	{
 		"id": "20",
 		"title": "Curriculum Vitae",        
-        "cover": "./images/cv.jpg",
+        "cover": "./images/cv.webp",
         "link": "./page1_Curriculum.html"	
 	},
     {
 		"id": "21",
 		"title": "Présentation",        
-        "cover": "./images/presentation.jpg",
+        "cover": "./images/presentation.webp",
         "link": "./page2_Presentation.html"	             
     },
     {
 		"id": "22",
 		"title": "Projets OpenClassRoom",        
-        "cover": "./images/projet_ocr.jpg",
+        "cover": "./images/projet_ocr.webp",
         "link": "./page3_OpenClassRoom.html"           
     },
     {
 		"id": "23",
 		"title": "Projets professionnels",        
-        "cover": "./images/projets_pro.jpg",
+        "cover": "./images/projets_pro.webp",
         "link": "./page4_Professionnels.html"	             
     },
     {
 		"id": "24",
 		"title": "Me contacter",        
-        "cover": "./images/Me_contacter.jpg",
+        "cover": "./images/Me_contacter.webp",
         "link": "./page5_Contact.html"	            
     }
 ]

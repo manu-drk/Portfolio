@@ -2,7 +2,7 @@
 	{
 		"id": "01",
 		"title": "Maison Vague",
-		"cover": "./images/Maison.jpg",		
+		"cover": "./images/Maison.webp",		
 		"Site": "https://maisonvague.fr/",
         "Github": "",
 			"tags": [
