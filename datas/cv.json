@@ -115,19 +115,19 @@
         "items": [
             {
                 "intitule": "Langages de programmation:",
-                "description": "JavaScript, CSS, HTML, Sass"
+                "description": "JavaScript (intermédiaire), CSS (avancé), HTML (avancé), Sass (intermédiaire)"
             },
             {
                 "intitule": "Frameworks et bibliothèques:",
-                "description": "Express, Express Mongo, ReactJS, React Routeur, NodeJS, Helmet, Bcrypt"
+                "description": "Express (intermédiaire), Express Mongo (intermédiaire), ReactJS (intermédiaire), React Routeur (intermédiaire), NodeJS (débutant), Helmet, Bcrypt"
             },
             {
                 "intitule": "Base de données:",
-                "description": "MongoDB"
+                "description": "MongoDB (intermédiaire)"
             },
             {
                 "intitule": "Utilitaires et pratiques:",
-                "description": "Bash, GitHub, SEO"
+                "description": "Bash (intermédiaire), GitHub (avancé), SEO (intermédiaire)"
             }
         ]
     }
