@@ -74,6 +74,11 @@
 
 @media (max-width: 450px) {
 
+    nav ul li a {        
+        padding: 1px;        
+        font-size: 12px;        
+    }
+
     ::-webkit-scrollbar {
         width: 6px;
         height: 5px;
@@ -634,7 +639,7 @@
 
     .tag {
         font-size: 0.8em;
-        padding: 5px 10px;
+        padding: 0px 5px;
         text-align: center;
     }
 
@@ -713,11 +718,11 @@
     }
 
     .tags-container {    
-        margin-top: 2%;    
+        margin-top: 5%;    
     }
 
     .tag {        
-        padding: 2px 8px;        
+        padding: 2px 1px;        
     }
 
     .modal-content {
