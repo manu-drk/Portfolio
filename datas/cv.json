@@ -115,7 +115,7 @@
         "items": [
             {
                 "intitule": "Langages de programmation:",
-                "description": "JavaScript (intermédiaire), CSS (avancé), HTML (avancé), Sass (intermédiaire)"
+                "description": "JavaScript (avancé), CSS (avancé), HTML (avancé), Sass (intermédiaire)"
             },
             {
                 "intitule": "Frameworks et bibliothèques:",
